@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i');
+//  font-family: 'Open Sans', sans-serif;
+//  font-family: 'Open Sans Condensed', sans-serif;
+
+@import "constants";
+@import "reset";
+
+.container {
+    width: 100%;
+    padding:{
+        right: 1.5rem;
+        left: 1.5rem;
+    }
+
+    @media (min-width: map-get($MEDIA, SM)) {
+        padding:{
+            right: 2rem;
+            left: 2rem;
+        }
+    }
+
+    @media (min-width: map-get($MEDIA, LG)) {
+        max-width: $MAX-WIDTH;
+        margin: {
+            left: auto;
+            right: auto;
+        }
+    }
+}
