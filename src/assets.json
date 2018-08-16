@@ -1,0 +1,19 @@
+{
+    "tiser": {
+        "js": "/src/js/tiser.b851a6183792f198f0f9.min.js",
+        "css": "/src/css/tiser.b851a6183792f198f0f9.min.css"
+    },
+    "common": {
+        "js": "/src/js/common.b851a6183792f198f0f9.min.js"
+    },
+    "": {
+        "png": [
+            "/src/icons/logo.ee3ce5.png",
+            "/src/icons/portfolio-xl.2c0521.png",
+            "/src/icons/showdow-logo-lg.a916e0.png",
+            "/src/icons/bg.abaa10.png"
+        ],
+        "svg": "/src/icons/download.0460dd.svg",
+        "html": "/src/tiser.html"
+    }
+}

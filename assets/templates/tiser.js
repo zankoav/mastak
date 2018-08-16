@@ -1,1 +1,2 @@
-console.log("tiser ready");
+import './../components/_base.scss';
+import './../components/tiser/tiser';

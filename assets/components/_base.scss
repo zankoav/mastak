@@ -5,6 +5,11 @@
 @import "constants";
 @import "reset";
 
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+
 .container {
     width: 100%;
     padding:{
