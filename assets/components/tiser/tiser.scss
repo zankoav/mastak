@@ -110,6 +110,16 @@
             flex-direction: column;
             justify-content: center;
             padding: 0 1rem;
+        }
+    }
+
+    &__form-wrapper{
+        &_main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+
             @media (min-width: map_get($MEDIA, SM)) {
                 flex-direction: row;
             }
@@ -130,7 +140,7 @@
             @media (min-width: map_get($MEDIA, SM)) {
                 margin-bottom: 0;
                 margin-right: 1.25rem;
-                min-width: 280px;
+                flex: 1;
             }
         }
     }

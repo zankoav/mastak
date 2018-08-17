@@ -1,0 +1,20 @@
+@import "./../constants";
+
+div.wpcf7 span.ajax-loader {
+    margin: 1rem auto;
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.is-active {
+        display: inline-block;
+    }
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        width: 100%;
+        background-size: contain;
+        background-position-x: 50%;
+    }
+}

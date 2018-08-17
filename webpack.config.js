@@ -24,12 +24,16 @@ const THEME_NAME = 'mastak';
 
 
 let entries = {
-    tiser: './tiser.js'
+    tiser: './tiser.js',
+    page404: './page404.js'
 };
 
 let pugs = {
     tiser: {
         title: "tiser title"
+    },
+    page404: {
+        title: "404 title"
     }
 };
 

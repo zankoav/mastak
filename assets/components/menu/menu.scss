@@ -1,0 +1,23 @@
+@import './../constants';
+
+.menu {
+
+    &_main {
+        padding: 1rem 0;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            padding: 2rem 0;
+        }
+    }
+
+    &__logo {
+        &_mastak {
+            width: 76px;
+
+            @media (min-width: map_get($MEDIA, SM)) {
+                width: 100px;
+            }
+        }
+    }
+
+}

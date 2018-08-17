@@ -1,0 +1,1 @@
+import './ajax-loader.scss';
