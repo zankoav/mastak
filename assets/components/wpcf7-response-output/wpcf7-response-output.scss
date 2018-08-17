@@ -1,0 +1,14 @@
+@import "./../constants";
+
+div.wpcf7-response-output {
+    margin: 1rem 0 0;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    color: $DARK-RED;
+}
+
+div.wpcf7-mail-sent-ok {
+    color: $GREEN;
+}
+
