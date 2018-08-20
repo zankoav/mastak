@@ -12,7 +12,7 @@
         <a class="tiser__email tiser__email_after-logo" href="mailto:<?= $email; ?>"><?= $email; ?></a>
     </div>
     <div class="tiser__content">
-        <h1 class="tiser__title tiser__title_center">we’re coming soon…</h1>
+        <h1 class="tiser__title tiser__title_center">coming soon…</h1>
         <p class="tiser__description tiser__description_center">The website is under construction. We’ll be here soon
             with our new awesome site, subscribe to be notified.</p>
 		<?php echo do_shortcode( '[contact-form-7 id="5" title="Subscribe" html_class="tiser__form tiser__form_main"]' ); ?>
