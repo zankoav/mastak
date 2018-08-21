@@ -33,25 +33,6 @@
         }
     }
 
-    &__email {
-
-        &_after-logo {
-            color: $BLACK;
-            font-size: 13px;
-            display: inline-block;
-            padding-top: 1rem;
-            transition: all .4s;
-
-            &:hover {
-                color: $RED;
-            }
-
-            @media (min-width: map_get($MEDIA, SM)) {
-                padding-top: 1.5rem;
-            }
-        }
-    }
-
     &__shadow {
         &_right-top {
             position: absolute;
@@ -78,7 +59,7 @@
         &_center {
             text-align: center;
             text-transform: uppercase;
-            color: $GRAY;
+            color: $RED;
             font-weight: 600;
             font-size: 25px;
 
