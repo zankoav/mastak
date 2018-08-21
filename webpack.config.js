@@ -25,7 +25,9 @@ const THEME_NAME = 'mastak';
 
 let entries = {
     tiser: './tiser.js',
-    page404: './page404.js'
+    page404: './page404.js',
+    home: './home.js',
+    portfolio: './portfolio.js'
 };
 
 let pugs = {
@@ -34,11 +36,17 @@ let pugs = {
     },
     page404: {
         title: "404 title"
+    },
+    home: {
+        title: "home title"
+    },
+    portfolio: {
+        portfolio: "portfolio title"
     }
 };
 
 const NODE_ENV = process.env.NODE_ENV;
-const DEV_MODE = NODE_ENV === 'development';
+const DEV_MODE = NODE_ENV == 0;
 const WP = NODE_ENV === "wp-production";
 
 
