@@ -1,0 +1,74 @@
+@import "./../constants";
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: 56px;
+  background-color: $WHITE;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: map_get($MEDIA, SM)) {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    height: 100px;
+  }
+
+  @media (min-width: map_get($MEDIA, LG)) {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
+
+  &__logo {
+    flex-grow: 25;
+  }
+
+  &__title {
+    display: flex;
+    margin-right: 20px;
+    margin-bottom: .9rem;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      margin-right: 40px;
+    }
+  }
+
+  &_burger {
+    flex-grow: 1;
+  }
+
+  &__img {
+
+    &_logo {
+      width: 75px;
+
+      @media (min-width: map_get($MEDIA, SM)) {
+        width: 100px;
+      }
+    }
+
+    &_burger {
+      width: 40px;
+    }
+  }
+
+  &__text {
+    font-family: 'PFBeauSansPro_Bold';
+    text-transform: uppercase;
+    font-size: 11px;
+    line-spacing: 34px;
+
+    &_color_black {
+      color: #000000;
+      margin-right: .25rem;
+    }
+
+    &_color_red {
+      color: #E60000;
+    }
+  }
+
+}
