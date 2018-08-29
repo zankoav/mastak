@@ -1,0 +1,22 @@
+@import "./../constants";
+
+.partners {
+
+  &__logo {
+    max-height: 70px;
+  }
+
+  &__container {
+    padding: 30px;
+  }
+
+  &__wrapper {
+    align-items: center;
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
