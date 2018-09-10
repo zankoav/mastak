@@ -1,0 +1,57 @@
+@import "./../constants";
+
+.main-swiper {
+
+  &__container {
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      height: 100vh;
+    }
+  }
+
+  &__slide {
+    position: relative;
+    height: 100% !important;
+
+    &_background-image_last {
+      background-image: url("./../../images/bg.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &_color_pink {
+      background-color: pink;
+    }
+
+    &_color_yellow {
+      background-color: yellow;
+    }
+
+    &_color_green {
+      background-color: green;
+    }
+
+    &_color_grey {
+      background-color: grey;
+    }
+  }
+
+  &_cursor_down-white {
+    cursor: url(./../../images/arrow-down-white.png), auto;
+  }
+
+  &_cursor_up-white {
+    cursor: url(./../../images/arrow-up-white.png), auto;
+  }
+
+  &_cursor_down-black {
+    cursor: url(./../../images/arrow-down-black.png), auto;
+  }
+
+  &_cursor_up-black {
+    cursor: url(./../../images/arrow-up-black.png), auto;
+  }
+}
+
+

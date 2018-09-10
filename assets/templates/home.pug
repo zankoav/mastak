@@ -1,5 +1,6 @@
+include ./../components/mixins/header/header
+include ./../components/mixins/header-description/header-description
 include ./../components/head
 body
-    include ./../components/services/services
-    include ./../components/partners/partners
-    include ./../components/copyright/copyright
+    +header ()
+    include ./../components/main_swiper/main_swiper

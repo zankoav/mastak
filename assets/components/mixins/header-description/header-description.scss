@@ -1,0 +1,38 @@
+@import "./../../constants";
+
+.header-description {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  justify-content: flex-end;
+  margin-right: 75px;
+
+  @media (min-width: map_get($MEDIA, SM)) {
+    height: 100px;
+    margin-right: 100px;
+  }
+
+  @media (min-width: map_get($MEDIA, LG)) {
+    margin-right: 120px;
+  }
+
+  &__text {
+    font-family: 'PFBeauSansPro_Bold';
+    text-transform: uppercase;
+    font-size: 11px;
+
+    &_color_black {
+      color: $BLACK;
+      margin-right: .25rem;
+    }
+
+    &_color_white {
+      color: $WHITE;
+      margin-right: .25rem;
+    }
+
+    &_color_red {
+      color: $RED;
+    }
+  }
+}

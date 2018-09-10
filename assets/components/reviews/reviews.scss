@@ -1,0 +1,37 @@
+@import "./../constants";
+
+.reviews {
+
+  @media (min-width: map_get($MEDIA, SM)) {
+    margin-top: 6rem;
+  }
+
+  @media (min-width: map_get($MEDIA, MD)) {
+    margin-top: 1rem;
+  }
+
+  @media (min-width: map_get($MEDIA, LG)) {
+    margin-top: 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 900px;
+    padding: 0 2rem;
+    margin: 0 auto;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      height: calc(100vh - 600px);
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      height: calc(100vh - 400px);
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      height: calc(100vh - 320px);
+    }
+  }
+}

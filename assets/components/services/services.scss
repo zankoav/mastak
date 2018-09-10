@@ -1,11 +1,9 @@
 @import "./../constants";
 
 .services {
-  padding-top: 56px;
 
   @media (min-width: map_get($MEDIA, SM)) {
-    height: 100vh;
-    padding-top: 100px;
+    height: calc(100vh - 100px);
   }
 
   &__inner-wrap {
@@ -114,8 +112,13 @@
       top: 50%;
       right: 8%;
 
+      @media (min-width: map_get($MEDIA, SM)) {
+        left: 46%;
+      }
+
       @media (min-width: map_get($MEDIA, MD)) {
-        top: 64%;
+        top: 56%;
+        left: 34%;
       }
 
       @media (min-width: map_get($MEDIA, LG)) {

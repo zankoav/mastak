@@ -2,12 +2,25 @@
 
 .partners {
 
+  @media (min-width: map_get($MEDIA, SM)) {
+    margin-top: 9rem;
+  }
+
+  @media (min-width: map_get($MEDIA, MD)) {
+    margin-top: 6rem;
+  }
+
+  @media (min-width: map_get($MEDIA, LG)) {
+    margin-top: 3rem;
+  }
+
   &__logo {
     max-height: 70px;
   }
 
   &__container {
-    padding: 30px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
   }
 
   &__wrapper {

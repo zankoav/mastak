@@ -1,0 +1,84 @@
+@import "./../constants";
+
+.reviews-swiper {
+
+  @media (min-width: map_get($MEDIA, SM)) {
+    width: 33.333333%;
+  }
+
+  &__container {
+    height: 200px;
+    padding: 1rem;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      height: calc(100vh - 600px);
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      height: calc(100vh - 400px);
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      height: calc(100vh - 320px);
+    }
+  }
+
+  &__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  &__img {
+    max-height: 60px;
+    max-width: initial;
+    border-radius: 50%;
+    transition: all .4s;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      height: 100%;
+    }
+
+    &_active {
+      box-shadow: 0 0 30px 0 #99c3b7;
+      transform: scale(1.4);
+    }
+  }
+
+  &__button {
+
+    display: none;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      display: block;
+    }
+
+    &_next {
+      top: 96%;
+      right: calc(50% - 18px / 2);;
+      width: 18px;
+      height: 16px;
+      margin-top: 0;
+      z-index: 10;
+      background-size: contain;
+      transform: rotate(-90deg);
+      position: absolute;
+      background-image: url("./../../images/combined-shape@3x.png");
+    }
+
+    &_prev {
+      top: 0;
+      left: calc(50% - 18px / 2);
+      width: 18px;
+      height: 16px;
+      margin-top: 0;
+      z-index: 10;
+      background-size: contain;
+      transform: rotate(90deg);
+      position: absolute;
+      background-image: url("./../../images/combined-shape@3x.png");
+    }
+  }
+}
+

@@ -1,7 +1,7 @@
 import './partners.scss';
 import Swiper from 'swiper';
 
-let swiper = new Swiper('.swiper-container', {
+new Swiper('.partners__container', {
     slidesPerView: 7,
     spaceBetween: 30,
     loop: true,
@@ -29,4 +29,5 @@ let swiper = new Swiper('.swiper-container', {
         },
     }
 });
+
 
