@@ -11,3 +11,14 @@ mixin portfolio_menu_slide(logo_url, ...title_list)
                 p.portfolio-menu-slide__description= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam culpa exercitationem incidunt ipsam itaque porro saepe voluptates."
                 a.portfolio-menu-slide__link(href='#') view
                 img.portfolio-menu-slide__logo(src= logo_url)
+
+mixin menu_list_li(index, ...list)
+    - for (var x = 0; x < list.length; x++)
+        if index == x
+            li.menu__list-item.menu__list-item_active
+                a.menu__list-item-link= list[x]
+        else
+            li.menu__list-item
+                a.menu__list-item-link= list[x]
+
+

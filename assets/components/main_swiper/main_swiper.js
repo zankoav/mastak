@@ -72,16 +72,3 @@ mainSwiper.on('slideChangeTransitionEnd', function () {
     }
     $(document).mousemove(cursorView);
 });
-
-// $(window).scroll(function () {
-//
-//     let scroll = $(window).scrollTop();
-//
-//    if(screen.width < 768){
-//        if(scroll > screen.height){
-//            $('.header__line-burger').attr('class', 'header__line-burger header__line-burger_black');
-//        }else{
-//            $('.header__line-burger').attr('class', 'header__line-burger');
-//        }
-//    }
-// });
