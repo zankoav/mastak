@@ -10,3 +10,4 @@ import './../components/partners/partners.js';
 import './../components/copyright/copyright.js';
 import './../components/portfolio-image-slide/portfolio-image-slide';
 import './../components/portfolio-menu-slide/portfolio-menu-slide';
+import './../components/menu/menu';

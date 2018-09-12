@@ -1,23 +1,48 @@
 @import './../constants';
 
 .menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    width: 100vw;
+    background: $WHITE url("./../../images/showdow-logo-lg.png") 20% 0% no-repeat;
+    background-size: cover;
+    transition: right .6s;
+    padding: 2.5rem;
 
-    &_main {
-        padding: 1rem 0;
-
-        @media (min-width: map_get($MEDIA, SM)) {
-            padding: 2rem 0;
-        }
+    &_active {
+        right: 0;
     }
 
-    &__logo {
-        &_mastak {
-            width: 76px;
+    &__title{
+        text-transform: uppercase;
+        font-size: 38px;
+        color: $LIGHT-GRAY;
+        font-weight: bold;
+    }
 
-            @media (min-width: map_get($MEDIA, SM)) {
-                width: 100px;
+    &__list{
+        padding: 2rem 0 3rem;
+        border-bottom: 1px solid $GRAY;
+    }
+
+    &__list-item{
+        padding: .5rem 0;
+        &_active{
+            .menu__list-item-link{
+                color: $DARK-RED;
             }
         }
+
     }
 
+    &__list-item-link{
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $DARK-GRAY;
+        font-weight: bold;
+    }
 }

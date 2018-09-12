@@ -1,3 +1,10 @@
-nav.menu.menu_main
-    a.menu__link.menu__link_back-home(href="/")
-        img.menu__logo.menu__logo_mastak(src=require("./../../images/logo.png"))
+nav.menu
+    h3.menu__title menu
+    ul.menu__list
+        +menu_list_li(
+            2,
+            "our portfolio",
+            "what we do",
+            "reviews about us",
+            "our clients"
+        )
