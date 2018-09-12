@@ -1,0 +1,98 @@
+@import "./../constants";
+
+.portfolio-menu-slide{
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 0 2rem 2rem;
+
+    &__inner{
+        animation: fade .8s ease-out;
+        display: none;
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            width: initial;
+            height: initial;
+            position: static;
+        }
+    }
+
+    &.swiper-slide-active{
+        .portfolio-menu-slide__inner{
+            display: block;
+        }
+    }
+
+    &__title{
+        color: $WHITE;
+        font-size: 28px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-top: 94px;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            color: $GRAY;
+            margin-top: initial;
+            max-width: 80%;
+            font-size: 52px;
+            text-align:left;
+        }
+    }
+
+    &__description{
+        max-width: 70%;
+        color: $GRAY;
+        font-size: 20px;
+        margin: 2rem 0;
+        display: none;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            display: block;
+        }
+    }
+
+    &__link{
+        display: block;
+        text-transform: uppercase;
+        color: $DARK-GRAY;
+        font-size: 18px;
+        font-weight: lighter;
+        width: 100%;
+        background: $WHITE;
+        padding: .5rem 0;
+        text-align: center;
+        transition: all .4s;
+
+        position: absolute;
+        bottom: 3rem;
+
+        &:hover{
+            transform: scale(1.025);
+        }
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            color: $GRAY;
+            max-width: 60%;
+            background: url("./../../images/bg_view_link.png") no-repeat;
+            background-size: 100% 100%;
+            position: initial;
+            bottom: initial;
+        }
+    }
+
+    &__logo{
+        position: absolute;
+        max-width: 100px;
+        bottom: 6rem;
+
+        display: none;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            display: block;
+        }
+    }
+}

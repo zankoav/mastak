@@ -1,8 +1,11 @@
-
 mixin header(isWhiteBurger)
     .header
-        a(class='header__logo' href='#')
-            img.header__img_logo(src=require("./../images/logo.png"))
+        .header__inner
+            a(class='header__logo' href='#')
+                img.header__img_logo(src=require("./../images/logo.png"))
+            .header__text
+                span.header__text-left our
+                span.header__text-right portfolio
         a(class='header__burger' href='#')
             span.header__line-burger
             span.header__line-burger

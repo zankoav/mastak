@@ -189,6 +189,20 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            // Font Loader
+            {
+                test: /\.(mp4)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            outputPath: './video/',
+                            name: '[name].[hash:6].[ext]',
+                            publicPath: WP ? `/wp-content/themes/${THEME_NAME}/src/video/` : '/src/video/'
+                        }
+                    }
+                ]
             }
         ]
     },

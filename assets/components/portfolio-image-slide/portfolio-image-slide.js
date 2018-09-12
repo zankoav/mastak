@@ -1,0 +1,1 @@
+import './portfolio-image-slide.scss';

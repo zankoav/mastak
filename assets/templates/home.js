@@ -8,3 +8,5 @@ import './../components/services/services.js';
 import './../components/reviews/reviews.js';
 import './../components/partners/partners.js';
 import './../components/copyright/copyright.js';
+import './../components/portfolio-image-slide/portfolio-image-slide';
+import './../components/portfolio-menu-slide/portfolio-menu-slide';

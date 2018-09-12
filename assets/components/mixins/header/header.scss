@@ -5,12 +5,14 @@
   top: 0;
   z-index: 999;
   width: 100%;
-  height: 56px;
+  height: 60px;
   padding-right: 1rem;
   padding-left: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: transparent;
+  transition: background-color .4s;
 
   @media (min-width: map_get($MEDIA, SM)) {
     padding-right: 1.25rem;
@@ -21,6 +23,19 @@
   @media (min-width: map_get($MEDIA, LG)) {
     padding-right: 2.5rem;
     padding-left: 2.5rem;
+  }
+
+  &_replace-color{
+    background-color: $WHITE;
+    box-shadow: 0 1px 2px $LIGHT-GRAY;
+
+    .header__inner{
+      opacity: 1;
+    }
+
+    .header__line-burger{
+      background-color: $BLACK;
+    }
   }
 
   &__burger {
@@ -48,9 +63,40 @@
     height: 3px;
     border-radius: 2px;
     background-color: $WHITE;
+    transition: all .6s;
 
     &_black {
       background-color: $BLACK;
+    }
+  }
+
+  &__text {
+    font-family: 'PFBeauSansPro_Bold', serif;
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-top: 12px;
+    @media (min-width: map_get($MEDIA, SM)) {
+      display: none;
+    }
+
+  }
+
+  &__text-left{
+    color: $RED;
+    margin-right: .25rem;
+  }
+
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 auto;
+    margin-right: 1rem;
+    opacity: 0;
+    transition: opacity .6s;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      opacity: 1;
     }
   }
 }

@@ -2,6 +2,7 @@
 $BLACK: #000;
 $DARK-GRAY: #4A4A4A;
 $GRAY: #626262;
+$LIGHT-GRAY: #b4b4b4;
 $RED: #E30613;
 $DARK-RED: #bf0612;
 $GREEN: #02b400;
@@ -12,7 +13,9 @@ $MAX-WIDTH: 1200px;
 $MEDIA: (
         SM:768px,
         MD:1024px,
-        LG:1280px
+        LG:1280px,
+        HD:1920px,
+        XHD:2560px
 );
 
 @mixin review-text ($size){

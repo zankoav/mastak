@@ -1,9 +1,162 @@
+@import "./../constants";
 
 .portfolio {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top:0;
-  z-index: -1;
-  background-color: darkgrey;
+    width: 100%;
+    height: 100vh;
+
+    &__image-wrapper {
+
+        padding-top: 50px;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            padding-top:0;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            z-index: 1000;
+        }
+    }
+
+    &__image-slider {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__image-slider-slide {
+        display: none;
+        height: 100%;
+        animation: fade .8s ease-out;
+
+        &.swiper-slide-active{
+            display: block;
+        }
+    }
+
+    &__image-slider-slide-inner{
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &__menu-slider {
+        width: 100vw;
+        height: 100%;
+        margin: initial;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            background: url("./../../images/left-menu.png") no-repeat;
+            background-size: 100% 100%;
+            width: 60vw;
+        }
+
+        @media (min-width: map_get($MEDIA, MD)) {
+            width: 50vw;
+        }
+
+        @media (min-width: map_get($MEDIA, LG)) {
+            width: 35vw;
+        }
+
+        @media (min-width: map_get($MEDIA, HD)) {
+            width: 25vw;
+        }
+
+    }
+
+    &__menu-navigation {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        padding: 5rem 0.5rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            height: auto;
+            padding: 1rem 0.5rem;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    }
+
+    &__menu-slider-prev, &__menu-slider-next {
+        padding: 2rem 1.5rem;
+        background: url("./../../images/arrow-left-white.svg") 50% 55% no-repeat;
+        background-size: 30% 30%;
+
+        &:focus{
+            outline: none;
+        }
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            background: url("./../../images/navigation_left.png") 50% 55% no-repeat;
+            background-size: 20% 20%;
+        }
+    }
+
+    &__menu-slider-next {
+        background-image: url("./../../images/arrow-right-white.svg");
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            background: url("./../../images/navigation_right.png") 50% 55% no-repeat;
+            background-size: 20% 20%;
+        }
+    }
+
+    &__menu-slider-index {
+        font-size: 20px;
+        color: $WHITE;
+        font-weight: 500;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            color: $GRAY;
+        }
+    }
+
+    &__menu-slider-size {
+        margin-top: 4px;
+        font-size: 14px;
+        color: $WHITE;
+        font-weight: 300;
+
+        &::before {
+            content: '/';
+            margin: 0 .25rem;
+        }
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            color: $GRAY;
+        }
+    }
+
+    &__menu-slider-couner{
+        align-self: flex-end;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            align-self: initial;
+        }
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

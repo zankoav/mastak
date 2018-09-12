@@ -1,4 +1,4 @@
-mixin header_description(text_first,text_second,color)
-    .header-description
+mixin header_description(text_first,text_second,color,modificator)
+    .header-description(class= modificator)
         span(class='header-description__text header-description__text_color_' + color)= text_first
         span(class='header-description__text header-description__text_color_red')= text_second
