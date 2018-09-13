@@ -10,39 +10,171 @@
     background-size: cover;
     transition: right .6s;
     padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+        padding-top:12rem;
+        width: 518px;
+        right: -518px;
+        background: url("./../../images/menu.png")  no-repeat;
+        background-size: 100% 100%;
+        align-items: flex-end;
+        overflow-y:initial;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+        background: url("./../../images/menu-md.png")  no-repeat;
+        background-size: 100% 100%;
+        width: 860px;
+        right: -860px;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
 
     &_active {
         right: 0;
     }
 
-    &__title{
+    &__top {
+        flex: 1 0 auto;
+        border-bottom: 1px solid $GRAY;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            border-bottom:none;
+        }
+
+        @media (min-width: map_get($MEDIA, MD)) {
+            flex: initial;
+            margin-left: auto;
+            margin-right: 2rem;
+        }
+
+    }
+
+    &__bottom{
+        @media (min-width: map_get($MEDIA, SM)) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+
+        @media (min-width: map_get($MEDIA, MD)) {
+            flex-direction: column;
+            margin-top: 57px;
+        }
+    }
+
+    &__title {
         text-transform: uppercase;
         font-size: 38px;
+        line-height: 38px;
         color: $LIGHT-GRAY;
         font-weight: bold;
+        margin-bottom: 6%;
+
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            font-size: 70px;
+        }
+
+        @media (min-width: map_get($MEDIA, LG)) {
+            font-size: 72px;
+        }
     }
 
-    &__list{
+    &__list {
         padding: 2rem 0 3rem;
-        border-bottom: 1px solid $GRAY;
     }
 
-    &__list-item{
+    &__list-item {
         padding: .5rem 0;
-        &_active{
-            .menu__list-item-link{
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            padding: 1rem 0;
+        }
+
+        &_active {
+            .menu__list-item-link {
                 color: $DARK-RED;
             }
         }
 
     }
 
-    &__list-item-link{
+    &__list-item-link {
         width: 100%;
         height: 100%;
         font-size: 20px;
         text-transform: uppercase;
         color: $DARK-GRAY;
         font-weight: bold;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            font-size: 27px;
+        }
+
+        @media (min-width: map_get($MEDIA, LG)) {
+            font-size: 28px;
+        }
     }
+
+    &__info {
+        margin-top: 1.5rem;
+        font-size: 11px;
+        color: $GRAY;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            font-size: 15px;
+            max-width: 175px;
+            margin-left: 2rem;
+
+            &_social{
+                max-width: initial;
+                flex: initial;
+            }
+        }
+
+        @media (min-width: map_get($MEDIA, MD)) {
+            max-width: initial;
+            margin-top: 3rem;
+            font-size: 16px;
+        }
+    }
+
+    &__info-title {
+        font-weight: bold;
+    }
+
+    &__info-text {
+        &_link {
+            text-decoration: underline;
+            color: $GRAY;
+        }
+
+        &_phone{
+            @media (min-width: map_get($MEDIA, SM)) {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__info_social {
+        margin-top: 2rem;
+        @media (min-width: map_get($MEDIA, SM)) {
+            width: 175px;
+        }
+    }
+
+    &__info-social-link {
+        margin-right: 2rem;
+
+        @media (min-width: map_get($MEDIA, SM)) {
+            margin-right: 1rem;
+        }
+    }
+
+
 }

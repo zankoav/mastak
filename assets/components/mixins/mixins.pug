@@ -21,4 +21,7 @@ mixin menu_list_li(index, ...list)
             li.menu__list-item
                 a.menu__list-item-link= list[x]
 
-
+mixin menu_info_socials(...list)
+    each icon in list
+        a.menu__info-social-link(href="#")
+            img.menu__info-social-icon(src= icon)
