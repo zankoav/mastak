@@ -1,6 +1,6 @@
 .video
     .video__container.video__container_position_center
-        video(src=require("./../../video/3.mp4"), loop, autoplay, width="100%", height="auto").video__background_video
-        img.video__background_img(src=require("./../../images/template-bg.png"), alt="background")
+        video(src=require("./../../video/3.mp4"), muted, loop, autoplay, width="100%", height="auto").video__background_video
+        img.video__background_img(style='background-image:url(' + require("./../../images/template-bg.png") + ')')
     .video__content
         img.video__img_logo(src=require("./../../images/main-logo.png"), alt="logo")
