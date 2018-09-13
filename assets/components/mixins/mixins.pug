@@ -21,4 +21,15 @@ mixin menu_list_li(index, ...list)
             li.menu__list-item
                 a.menu__list-item-link= list[x]
 
-
+mixin potrfolioHeader(textLeft,textRight)
+    .potrfolio-header
+        .potrfolio-header__inner
+            a(class='potrfolio-header__logo' href='#')
+                img.potrfolio-header__img_logo(src=require("./../images/logo.png"))
+            .potrfolio-header__text
+                span.potrfolio-header__text-left= textLeft
+                span.potrfolio-header__text-right= textRight
+        include ./../menu/menu
+        a(class='potrfolio-header__burger' href='#')
+            span.potrfolio-header__line-burger
+            span.potrfolio-header__line-burger
