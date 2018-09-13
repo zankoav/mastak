@@ -1,0 +1,61 @@
+@import "./../constants";
+
+.video {
+  background: rgba(0, 0, 0, 0.3);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+
+  @media (min-width: map_get($MEDIA, LG)) {
+
+    &__background {
+
+      &_video {
+        display: block !important;
+      }
+
+      &_img {
+        display: none !important;
+      }
+    }
+  }
+
+  &__container {
+
+    &_position_center {
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+  }
+
+  &__background {
+
+    &_img {
+      display: block;
+      height: 100vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &_video {
+      display: none;
+    }
+  }
+
+  &__img {
+
+    &_logo {
+      position: absolute;
+      top: calc(50% - 50px);
+      left: calc(50% - 140px);
+    }
+  }
+}
