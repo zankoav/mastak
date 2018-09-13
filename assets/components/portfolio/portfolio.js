@@ -10,7 +10,7 @@ let imagesSwiper = new Swiper('.portfolio__image-slider', {
     resizeReInit: true,
 });
 
-let menuSwiper = new Swiper('.portfolio__menu-slider', {
+export let menuSwiper = new Swiper('.portfolio__menu-slider', {
     slidesPerView: 1,
     effect: 'fade',
     allowTouchMove: false,

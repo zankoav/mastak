@@ -4,7 +4,7 @@ import $ from 'jquery';
 
 const $SIZE = $('.header').height() / 4;
 
-let mainSwiper = new Swiper('.main-swiper__container', {
+export let mainSwiper = new Swiper('.main-swiper__container', {
     direction: 'vertical',
     breakpoints: {
         767: {
