@@ -11,11 +11,9 @@ reviewsSwiper.on('slideChange', function () {
 
 });
 
-
 reviewsSwiper.on('slideNextTransitionStart', function () {
     reviewsContentSwiper.slideNext();
 });
-
 
 reviewsSwiper.on('slidePrevTransitionStart', function () {
     reviewsContentSwiper.slidePrev();
