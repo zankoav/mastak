@@ -5,11 +5,6 @@ new Swiper('.partners__container', {
     slidesPerView: 7,
     spaceBetween: 30,
     loop: true,
-    autoplay: {
-        delay: 1000,
-        stopOnLast: true,
-        disableOnInteraction: false
-    },
     breakpoints: {
         480: {
             slidesPerView: 2,

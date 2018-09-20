@@ -16,6 +16,15 @@
 
   &__logo {
     max-height: 70px;
+    opacity: 0.5;
+    color: #fff;
+    transition: all .3s ;
+    filter: grayscale(1);
+
+    &:hover {
+      opacity: 1;
+      filter: grayscale(0);
+    }
   }
 
   &__container {
