@@ -2,4 +2,12 @@ include ./../components/mixins/mixins
 include ./../components/head
 body
     +potrfolioHeader('our','potrfolio')
+    div(data-active-menu=1)
+    +swiper('menu',
+    "All projects",
+    "Web developing",
+    "Mobile developing",
+    "UX / UI design",
+    "Branding"
+    )
     include ./../components/copyright/copyright

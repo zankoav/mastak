@@ -6,6 +6,8 @@ export let reviewsSwiper = new Swiper('.reviews-swiper__container', {
     direction: 'vertical',
     loop: true,
     slidesPerView: 3,
+    speed: 600,
+    parallax: true,
     allowTouchMove: false,
     breakpoints: {
         767: {

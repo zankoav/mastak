@@ -6,9 +6,11 @@ const $SIZE = $('.header').height() / 4;
 
 export let mainSwiper = new Swiper('.main-swiper__container', {
     direction: 'vertical',
+    mousewheel: true,
+    allowTouchMove: false,
     breakpoints: {
         767: {
-            allowTouchMove: false,
+            mousewheel: false,
         },
     }
 });

@@ -1,0 +1,63 @@
+@import "./../constants";
+
+.swiper-menu {
+
+  &__container {
+    display: flex;
+    border-bottom: 1px solid #9b9b9b;
+    align-items: center;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      justify-content: center;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__slide {
+    white-space: nowrap;
+    font-size: 1rem;
+    margin-bottom: -1px;
+    font-weight: 300;
+    color: #4a4a4a;
+
+    &_active {
+      position: relative;
+      background-color: $WHITE;
+      padding: 0 1rem 1rem;
+      font-weight: normal;
+
+      &:before {
+        position: absolute;
+        content: "";
+        width: calc(100% - 2rem);
+        height: 4px;
+        border-radius: 2px;
+        background-color: #e70606;
+        bottom: -1px;
+
+        @media (min-width: map_get($MEDIA, MD)) {
+          width: calc(100% - 5rem);
+        }
+
+        @media (min-width: map_get($MEDIA, LG)) {
+          width: calc(100% - 6rem);
+        }
+      }
+    }
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      padding: 0 1rem 1rem;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      padding: 0 2.5rem 1rem;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      padding: 0 3rem 1rem;
+    }
+  }
+}
