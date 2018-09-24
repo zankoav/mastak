@@ -1,7 +1,6 @@
 @import "./../constants";
 
-$FOOTERHEIGHT: 100px;
-$BLOCKHEIGHT: calc(100% - 100px);
+$FOOTER_HEIGHT: 100px;
 
 .portfolio-card {
   height: 500px;
@@ -18,7 +17,7 @@ $BLOCKHEIGHT: calc(100% - 100px);
   &__parallax-block {
     position: relative;
     width: 100%;
-    height: $BLOCKHEIGHT;
+    height: calc(100% - #{$FOOTER_HEIGHT});
     overflow: hidden;
     background-color: lightcoral;
   }
@@ -31,7 +30,7 @@ $BLOCKHEIGHT: calc(100% - 100px);
   &__footer {
     display: flex;
     flex-direction: column;
-    height: $FOOTERHEIGHT;
+    height: $FOOTER_HEIGHT;
     padding-top: 1rem;
   }
 
