@@ -1,0 +1,66 @@
+@import "./../constants";
+
+$FOOTERHEIGHT: 100px;
+$BLOCKHEIGHT: calc(100% - 100px);
+
+.portfolio-card {
+  height: 500px;
+  display: block;
+
+  @media (min-width: map_get($MEDIA, MD)) {
+    height: 600px;
+  }
+
+  @media (min-width: map_get($MEDIA, LG)) {
+    height: 700px;
+  }
+
+  &__parallax-block {
+    position: relative;
+    width: 100%;
+    height: $BLOCKHEIGHT;
+    overflow: hidden;
+    background-color: lightcoral;
+  }
+
+  &__img {
+    max-width: 100%;
+    position: absolute;
+  }
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    height: $FOOTERHEIGHT;
+    padding-top: 1rem;
+  }
+
+  &__title {
+    font-size: 19px;
+    font-weight: bold;
+    color: #626262;
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      font-size: 25px;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      font-size: 28px;
+    }
+
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    color: #626262;
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      font-size: 18px;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      font-size: 20px;
+      width: 289px;
+    }
+  }
+}
