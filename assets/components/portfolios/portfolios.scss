@@ -1,0 +1,131 @@
+@import "./../constants";
+@import "./../_base.scss";
+
+.portfolios {
+
+  padding: {
+    right: 3.25rem;
+    left: 3.25rem;
+  }
+
+  &__inner {
+    max-width: initial;
+    margin-top: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    margin: {
+      right: -3.25rem;
+      left: -3.25rem;
+    }
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      margin-top: 8rem;
+      margin-right: -1rem;
+      margin-left: -1rem;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      margin-right: -1.5rem;
+      margin-left: -1.5rem;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      margin-right: -2.5rem;
+      margin-left: -2.5rem;
+    }
+  }
+
+  &__item {
+    padding: {
+      left: 3.25rem;
+      right: 3.25rem;
+    }
+  ;
+    margin-bottom: .5rem;
+    width: 100%;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      width: 33.33333%;
+      padding: {
+        left: 1rem;
+        right: 1rem;
+      }
+    ;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      padding: {
+        left: 1.5rem;
+        right: 1.5rem;
+      }
+    ;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      padding: {
+        left: 2.5rem;
+        right: 2.5rem;
+      }
+    ;
+    }
+
+    &:nth-child(3n+2) {
+
+      @media (min-width: map_get($MEDIA, SM)) {
+        position: relative;
+        bottom: 5.5rem;
+      }
+
+      @media (min-width: map_get($MEDIA, MD)) {
+        position: relative;
+        bottom: 5rem;
+      }
+    }
+  }
+
+  &__more {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      position: relative;
+      bottom: 4.5rem;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      position: relative;
+      bottom: 4rem;
+    }
+  }
+
+  &__show-more-button {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #9b9b9b;
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      font-size: 24px;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      font-size: 28px;
+    }
+
+    &:before {
+      content: '+';
+      color: $RED;
+      padding-right: .5rem;
+      font-weight: bold;
+      font-size: 20px;
+
+      @media (min-width: map_get($MEDIA, MD)) {
+        font-size: 24px;
+      }
+
+      @media (min-width: map_get($MEDIA, LG)) {
+        font-size: 28px;
+      }
+    }
+
+  }
+}
