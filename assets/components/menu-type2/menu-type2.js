@@ -1,4 +1,4 @@
-import './menu-projects.scss';
+import './menu-type2.scss';
 import Swiper from 'swiper';
 import $ from "jquery";
 
@@ -19,7 +19,7 @@ $(window).resize(function () {
     menuProjects.init();
 });
 
-$($('.swiper-menu__slide')[activeMenu]).addClass('swiper-menu__slide_active');
+$($('.swiper-menu__link')[activeMenu]).addClass('swiper-menu__link_active');
 
 
 

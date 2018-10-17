@@ -27,7 +27,9 @@ let entries = {
     tiser: './tiser.js',
     page404: './page404.js',
     home: './home.js',
-    portfolio: './portfolio.js'
+    portfolio: './portfolio.js',
+    clients: './clients.js',
+    services: './services.js'
 };
 
 let pugs = {
@@ -42,6 +44,12 @@ let pugs = {
     },
     portfolio: {
         portfolio: "portfolio title"
+    },
+    clients: {
+        clients: "clients title"
+    },
+    services: {
+        services: "clients title"
     }
 };
 
