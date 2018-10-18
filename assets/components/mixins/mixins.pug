@@ -45,3 +45,24 @@ mixin swiper(name,...list)
             div(class='swiper-wrapper swiper-' + name + '__wrapper')
                 each slide in list
                     a(class='swiper-slide swiper-' + name + '__slide' href="#")= slide
+
+mixin portfolios(template,...list)
+    .portfolios.container
+        .portfolios__inner
+            - for (var x = 0; x < list.length; x++)
+                    - var classAdded = ''
+                    if x > 2
+                        - classAdded = 'portfolio-card_added'
+                    .portfolios__item
+                        +#{template}(classAdded,list[x])
+        .portfolios__more
+            .portfolios__show-more-plus +
+            a.portfolios__show-more-button(href="#") show more
+
+mixin portfolioCard(classAdded,data)
+    div(class='portfolio-card' + ' ' + classAdded)
+        a.portfolio-card__parallax-block(href= data.href)
+            img.portfolio-card__img(src= data.img_url)
+        .portfolio-card__footer
+            a.portfolio-card__title(href= data.href)= data.title
+            span.portfolio-card__subtitle= data.subtitle
