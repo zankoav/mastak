@@ -25,7 +25,6 @@ $FOOTER_HEIGHT: 100px;
     width: 100%;
     height: calc(100% - #{$FOOTER_HEIGHT});
     overflow: hidden;
-    background-color: lightcoral;
     transition: .4s ease-in-out;
 
     &:hover {
