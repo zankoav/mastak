@@ -1,0 +1,79 @@
+@import "./../../components/constants";
+
+.client-card {
+  height: 200px;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+
+  @media (min-width: map_get($MEDIA, LG)) {
+    height: 300px;
+  }
+
+  &:hover {
+    .client-card__background-color {
+      opacity: .7;
+      background-color: #e60000;
+    }
+
+    .client-card__icon {
+      filter: brightness(0.2) invert(1);
+    }
+
+    .client-card__text {
+      opacity: 1;
+      bottom: 1.5rem;
+    }
+  }
+
+  &_added {
+    display: none;
+  }
+
+  &__background-color {
+    width: 100%;
+    height: 100%;
+    background-color: #e7e7e7;
+    opacity: .9;
+    transition: .4s ease-in-out;
+  }
+
+  &__icon {
+    width: 100px;
+    position: absolute;
+    //top: calc(50% - 36px);
+    //left: calc(50% - 100px);
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      width: 120px;
+    }
+  }
+
+  &__text {
+    position: absolute;
+    color: $WHITE;
+    font: {
+      size: 18px;
+      family: "Open Sans", sans-serif;
+    }
+    line-height: 0.83;
+    bottom: -2rem;
+    opacity: 0;
+    transition: .4s ease-in-out;
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      font-size: 24px;
+      bottom: 2.5rem;
+    }
+
+    &:after {
+      margin-left: .5rem;
+      content: '\2192';
+      width: 22px;
+      color: $WHITE;
+    }
+  }
+}
