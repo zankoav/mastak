@@ -66,3 +66,32 @@ mixin portfolioCard(classAdded,data)
         .portfolio-card__footer
             a.portfolio-card__title(href= data.href)= data.title
             span.portfolio-card__subtitle= data.subtitle
+           
+        .container
+            div(class='swiper-container swiper-' + name + '__container')
+                ul(class='swiper-wrapper swiper-' + name + '__wrapper')
+                    each slide in list
+                        li(class='swiper-slide swiper-' + name + '__slide')
+                            a(class='swiper-' + name + '__link' href="#")= slide
+
+mixin headerType2(textLeft,textRight)
+    .header.container
+        .header__inner
+            a(class='header__logo' href='#')
+                img.header__img_logo(src=require("./../images/logo.png"))
+            .header__text
+                span.header__text-left= textLeft
+                span.header__text-right= textRight
+        include ./../menu/menu
+        a(class='header__burger' href='#')
+            span.header__line-burger
+            span.header__line-burger
+
+mixin swiperType2(name,...list)
+    div(class='swiper-' + name)
+        .container
+            div(class='swiper-container swiper-' + name + '__container')
+                ul(class='swiper-wrapper swiper-' + name + '__wrapper')
+                    each slide in list
+                        li(class='swiper-slide swiper-' + name + '__slide')
+                            a(class='swiper-' + name + '__link' href="#")= slide
