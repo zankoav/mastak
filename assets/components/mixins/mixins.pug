@@ -68,7 +68,6 @@ mixin portfolioCard(classAdded,data)
             span.portfolio-card__subtitle= data.subtitle
 
 
-
 mixin headerType2(textLeft,textRight)
     .header.container
         .header__inner
@@ -79,7 +78,7 @@ mixin headerType2(textLeft,textRight)
                 span.header__text-right= textRight
         include ./../menu/menu
         a(class='header__burger' href='#')
-            span.header__line-burger
+            span.header__line-burge
             span.header__line-burger
 
 mixin swiperType2(name,...list)
@@ -90,23 +89,3 @@ mixin swiperType2(name,...list)
                     each slide in list
                         li(class='swiper-slide swiper-' + name + '__slide')
                             a(class='swiper-' + name + '__link' href="#")= slide
-
-
-mixin clients(template,...list)
-    .clients.container
-        .clients__inner
-            - for (var x = 0; x < list.length; x++)
-                - var classAdded = ''
-                if x > 14
-                    - classAdded = 'client-card_added'
-                .clients__item
-                    +#{template}(classAdded,list[x])
-        .clients__more
-            .clients__show-more-plus +
-            a.clients__show-more-button(href="#") show more
-
-mixin clientCard(classAdded,data)
-    a(class='client-card'+ ' ' + classAdded href= data.href style=`background-image:url(${data.url_img})`)
-        .client-card__background-color
-        img.client-card__icon(src= data.url_icon)
-        span.client-card__text View last project
