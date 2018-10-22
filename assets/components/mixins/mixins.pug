@@ -78,7 +78,7 @@ mixin headerType2(textLeft,textRight)
                 span.header__text-right= textRight
         include ./../menu/menu
         a(class='header__burger' href='#')
-            span.header__line-burger
+            span.header__line-burge
             span.header__line-burger
 
 mixin swiperType2(name,...list)
@@ -89,10 +89,3 @@ mixin swiperType2(name,...list)
                     each slide in list
                         li(class='swiper-slide swiper-' + name + '__slide')
                             a(class='swiper-' + name + '__link' href="#")= slide
-
-mixin mastakTitle(title,subtitle)
-    .mastak-title
-        .container
-            .mastak-title__title= title
-            if(subtitle)
-                .mastak-title__subtitle= subtitle
