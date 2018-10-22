@@ -97,7 +97,7 @@ mixin clients(template,...list)
         .clients__inner
             - for (var x = 0; x < list.length; x++)
                 - var classAdded = ''
-                if x > 2
+                if x > 14
                     - classAdded = 'client-card_added'
                 .clients__item
                     +#{template}(classAdded,list[x])

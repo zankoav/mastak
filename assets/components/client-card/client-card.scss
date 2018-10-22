@@ -1,31 +1,46 @@
 @import "./../../components/constants";
 
 .client-card {
-  height: 200px;
-  position: relative;
+  display: flex;
+  align-items: center;
   background-position: center center;
   background-size: cover;
-  align-items: center;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
   justify-content: center;
-  display: flex;
 
   @media (min-width: map_get($MEDIA, LG)) {
     height: 300px;
   }
 
   &:hover {
+    box-shadow: 0 0 1px 1px rgba(98, 98, 98, .2);
+
     .client-card__background-color {
-      opacity: .7;
-      background-color: #e60000;
+      opacity: 1;
+      background-color: $WHITE;
     }
 
     .client-card__icon {
-      filter: brightness(0.2) invert(1);
+      transform: scale(1.2);
     }
 
     .client-card__text {
       opacity: 1;
-      bottom: 1.5rem;
+      bottom: 1rem;
+
+      @media (min-width: map_get($MEDIA, SM)) {
+        bottom: 1.25rem;
+      }
+
+      @media (min-width: map_get($MEDIA, SM)) {
+        bottom: 1rem;
+      }
+
+      @media (min-width: map_get($MEDIA, LG)) {
+        bottom: 2rem;
+      }
     }
   }
 
@@ -36,16 +51,15 @@
   &__background-color {
     width: 100%;
     height: 100%;
-    background-color: #e7e7e7;
-    opacity: .9;
+    background-color: $LIGHT-GRAY;
+    opacity: 0.7;
     transition: .4s ease-in-out;
   }
 
   &__icon {
     width: 100px;
     position: absolute;
-    //top: calc(50% - 36px);
-    //left: calc(50% - 100px);
+    transition: .4s ease-in-out;
 
     @media (min-width: map_get($MEDIA, MD)) {
       width: 120px;
@@ -54,26 +68,26 @@
 
   &__text {
     position: absolute;
-    color: $WHITE;
+    color: $DARK-GRAY;
     font: {
       size: 18px;
       family: "Open Sans", sans-serif;
+      weight: normal;
     }
     line-height: 0.83;
-    bottom: -2rem;
+    bottom: -1rem;
     opacity: 0;
     transition: .4s ease-in-out;
 
     @media (min-width: map_get($MEDIA, LG)) {
       font-size: 24px;
-      bottom: 2.5rem;
     }
 
     &:after {
       margin-left: .5rem;
       content: '\2192';
       width: 22px;
-      color: $WHITE;
+      color: $DARK-GRAY;
     }
   }
 }
