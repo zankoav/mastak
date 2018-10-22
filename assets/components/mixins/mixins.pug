@@ -108,3 +108,10 @@ mixin clientCard(classAdded,data)
         .client-card__background-color
         img.client-card__icon(src= data.url_icon)
         span.client-card__text View last project
+
+mixin mastakTitle(title,subtitle)
+    .mastak-title
+        .container
+            .mastak-title__title= title
+            if(subtitle)
+                .mastak-title__subtitle= subtitle
