@@ -1,0 +1,50 @@
+@import "./../../components/constants";
+
+.mastak-title {
+  margin-top: 3.75rem;
+
+  &__title {
+    color: $MIDDLE-GRAY;
+    font: {
+      family: PFBeauSansPro_Bold, sans-serif;
+      size: 36px;
+    }
+    line-height: 0.9;
+    margin-bottom: .25rem;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      font-size: 42px;
+      line-height: normal;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      font-size: 45px;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      font-size: 55px;
+    }
+  }
+
+  &__subtitle {
+    color: $BLACK;
+    font: {
+      family: 'PFBeauSansPro_Light', sans-serif;
+      size: 20px;
+    }
+    line-height: normal;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      font-size: 25px;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      font-size: 28px;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      font-size: 34px;
+    }
+  }
+}

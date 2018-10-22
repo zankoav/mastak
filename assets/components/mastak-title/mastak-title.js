@@ -1,0 +1,1 @@
+import './mastak-title.scss';

@@ -66,13 +66,7 @@ mixin portfolioCard(classAdded,data)
         .portfolio-card__footer
             a.portfolio-card__title(href= data.href)= data.title
             span.portfolio-card__subtitle= data.subtitle
-           
-        .container
-            div(class='swiper-container swiper-' + name + '__container')
-                ul(class='swiper-wrapper swiper-' + name + '__wrapper')
-                    each slide in list
-                        li(class='swiper-slide swiper-' + name + '__slide')
-                            a(class='swiper-' + name + '__link' href="#")= slide
+
 
 mixin headerType2(textLeft,textRight)
     .header.container
@@ -95,3 +89,10 @@ mixin swiperType2(name,...list)
                     each slide in list
                         li(class='swiper-slide swiper-' + name + '__slide')
                             a(class='swiper-' + name + '__link' href="#")= slide
+
+mixin mastakTitle(title,subtitle)
+    .mastak-title
+        .container
+            .mastak-title__title= title
+            if(subtitle)
+                .mastak-title__subtitle= subtitle
