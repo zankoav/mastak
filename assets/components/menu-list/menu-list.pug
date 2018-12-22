@@ -1,0 +1,8 @@
+mixin menuList(index, ...list)
+    - for (var x = 0; x < list.length; x++)
+    if index == x
+        li.menu__list-item
+            a.menu__list-item-link(href="#")= list[x]
+    else
+        li.menu__list-item
+            a.menu__list-item-link(href="#")= list[x]

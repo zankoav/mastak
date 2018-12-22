@@ -1,0 +1,5 @@
+mixin clientCard(classAdded,data)
+    a(class='client-card'+ ' ' + classAdded, href= data.href, target='_blank', style=`background-image:url(${data.url_img})`)
+        .client-card__background-color
+        img.client-card__icon(src= data.url_icon)
+        span.client-card__text View last project

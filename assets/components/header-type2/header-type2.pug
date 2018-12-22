@@ -1,0 +1,13 @@
+mixin headerType2(textLeft,textRight,mod)
+    - var cMod = mod ? mod : ''
+    header(class=`header ${cMod}`)
+        .header__inner
+            a(class='header__logo' href='#')
+                img.header__img_logo(src=require("./../images/logo.png"))
+            .header__text
+                span.header__text-left= textLeft
+                span.header__text-right= textRight
+        +menu()
+        a(class='header__burger' href='#')
+            span.header__line-burger
+            span.header__line-burger

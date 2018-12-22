@@ -1,9 +1,9 @@
-include ./../components/mixins/mixins
+include ./../mixins
 include ./../components/head
 body
-    +headerType2('our','potrfolio')
-    div(data-active-menu=1)
-    +swiperType2('menu',
+    +headerType2('our','potrfolio','container')
+    div(data-active-menu=2)
+    +swiper('menu',
     "All projects",
     "Web developing",
     "Mobile developing",
@@ -119,4 +119,4 @@ body
         subtitle: 'Brandbook for logistic company'
     }
     )
-    include ./../components/copyright/copyright
+    +copyright('Copyright 2018 © All Rights Reserved.')

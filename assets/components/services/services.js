@@ -1,2 +1,2 @@
 import './services.scss';
-import '../mixins/header/header.js';
+import './../header/header.js';

@@ -9,46 +9,33 @@
   left: 0;
   overflow: hidden;
 
-  @media (min-width: map_get($MEDIA, SM)) {
-
-    &__background {
-
-      &_video {
-
-        display: block !important;
-      }
-
-      &_img {
-        display: none !important;
-      }
-    }
-  }
-
   &__container {
+    min-width: 330%;
 
-    &_position_center {
-      position: absolute;
+    @media (min-width: map_get($MEDIA, SM)) {
+      min-width: 250%;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      min-width: 150%;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      min-width: 130%;
+    }
+
+    @media (min-width: map_get($MEDIA, HD)) {
       min-width: 100%;
-      min-height: 100%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: -1;
-    }
-  }
-
-  &__background {
-
-    &_img {
-      display: block;
-      height: 100vh;
-      background-size: cover;
-      background-repeat: no-repeat;
     }
 
-    &_video {
-      display: none;
-    }
+    display: block !important;
+    width: auto;
+    height: auto;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   &__img {

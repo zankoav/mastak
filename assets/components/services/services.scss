@@ -19,267 +19,275 @@
 
   &__item {
 
-    &_wrapper {
-
-      @media (min-width: map_get($MEDIA, SM)) {
-        display: flex;
-        flex-wrap: wrap;
-        height: 66.666666%;
-      }
-
-      @media (min-width: map_get($MEDIA, MD)) {
-        width: 66.666666%;
-        height: 100%;
+    &:hover {
+      .services__title {
+        transition: all .6s ease-out;
+        color: $RED;
       }
     }
 
-    &_wrapper-last {
-      overflow: hidden;
-    }
-
-    &_size {
-      display: block;
-      height: 200px;
-      position: relative;
-
-      @media (min-width: map_get($MEDIA, SM)) {
-        height: 50%;
-        width: 50%;
-      }
-    }
-
-    &_first {
-      display: block;
-      height: 200px;
-      background-color: #DAEBEC;
-      position: relative;
-
-      @media (min-width: map_get($MEDIA, SM)) {
-        height: 33.333333%;
-      }
-
-      @media (min-width: map_get($MEDIA, MD)) {
-        width: 33.333333%;
-        height: 100%;
-      }
-    }
-
-    &_color_light-grey {
-      background: radial-gradient(#E6E6E6, #B9B9B9);
-    }
-
-    &_color_light-yellow {
-      background-color: #F1EFD9;
-    }
-
-    &_color_light-blue {
-      background: radial-gradient(#E3E7EC, #71859E);
-    }
-
-    &_color_light-green {
-      background-color: #DEEDE3;
-    }
-
-  }
-
-  &__title {
-    color: $WHITE;
-    font-family: 'PFBeauSansPro_Bold';
-    font-size: 200%;
+  &_wrapper {
 
     @media (min-width: map_get($MEDIA, SM)) {
-      font-size: 300%;
+      display: flex;
+      flex-wrap: wrap;
+      height: 66.666666%;
     }
 
-    &_notebook {
-      position: absolute;
-      top: 38%;
-      left: 4%;
+    @media (min-width: map_get($MEDIA, MD)) {
+      width: 66.666666%;
+      height: 100%;
+    }
+  }
 
-      @media (min-width: map_get($MEDIA, SM)) {
-        top: 32%;
-        left: 18%;
-      }
+  &_wrapper-last {
+    overflow: hidden;
+  }
 
-      @media (min-width: map_get($MEDIA, MD)) {
-        top: 15%;
-        left: 6%;
-      }
+  &_size {
+    display: block;
+    height: 200px;
+    position: relative;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      height: 50%;
+      width: 50%;
+    }
+  }
+
+  &_first {
+    display: block;
+    height: 200px;
+    background-color: #DAEBEC;
+    position: relative;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      height: 33.333333%;
     }
 
-    &_mobile {
-      position: absolute;
-      top: 50%;
-      right: 8%;
-
-      @media (min-width: map_get($MEDIA, SM)) {
-        left: 46%;
-      }
-
-      @media (min-width: map_get($MEDIA, MD)) {
-        top: 56%;
-        left: 34%;
-      }
-
-      @media (min-width: map_get($MEDIA, LG)) {
-        top: 54%;
-        left: 46%;
-      }
+    @media (min-width: map_get($MEDIA, MD)) {
+      width: 33.333333%;
+      height: 100%;
     }
+  }
 
-    &_ux {
-      position: absolute;
-      left: 12%;
-      right: 30%;
+  &_color_light-grey {
+    background: radial-gradient(#E6E6E6, #B9B9B9);
+  }
+
+  &_color_light-yellow {
+    background-color: #F1EFD9;
+  }
+
+  &_color_light-blue {
+    background: radial-gradient(#E3E7EC, #71859E);
+  }
+
+  &_color_light-green {
+    background-color: #DEEDE3;
+  }
+
+}
+
+&__title {
+  color: $WHITE;
+  font-family: 'PFBeauSansPro_Bold';
+  font-size: 200%;
+
+  @media (min-width: map_get($MEDIA, SM)) {
+    font-size: 300%;
+  }
+
+  &_notebook {
+    position: absolute;
+    top: 38%;
+    left: 4%;
+
+    @media (min-width: map_get($MEDIA, SM)) {
       top: 32%;
-
-      @media (min-width: map_get($MEDIA, SM)) {
-        left: 46%;
-        right: 0;
-        top: 8%;
-      }
+      left: 18%;
     }
 
-    &_brand {
-      position: absolute;
-      left: 48%;
-      top: 42%;
-
-      @media (min-width: map_get($MEDIA, SM)) {
-        top: 56%;
-        left: 4%;
-      }
-
-      @media (min-width: map_get($MEDIA, MD)) {
-        left: 10%;
-      }
+    @media (min-width: map_get($MEDIA, MD)) {
+      top: 15%;
+      left: 6%;
     }
-
-    &_paper {
-      position: absolute;
-      top: 30%;
-      left: 14%;
-      right: 20%;
-
-      @media (min-width: map_get($MEDIA, SM)) {
-        top: 6%;
-        left: 10%;
-        right: 20%;
-      }
-    }
-
   }
 
-  &__img {
+  &_mobile {
+    position: absolute;
+    top: 50%;
+    right: 8%;
 
-    &_notebook {
-      position: absolute;
-      z-index: 1;
-      height: 108%;
-      top: 16%;
-      left: 30%;
-
-      @media (min-width: map_get($MEDIA, SM)) {
-        height: 132%;
-        top: 0;
-        left: 34%;
-      }
-
-      @media (min-width: map_get($MEDIA, MD)) {
-        height: auto;
-        left: 15%;
-        top: 29%;
-        min-width: 110%;
-      }
-
-      @media (min-width: map_get($MEDIA, LG)) {
-        top: 24%;
-        left: 10%;
-      }
+    @media (min-width: map_get($MEDIA, SM)) {
+      left: 46%;
     }
 
-    &_mobile {
-      position: absolute;
-      z-index: 1;
-      height: 94%;
-      top: 26%;
-
-      @media (min-width: map_get($MEDIA, SM)) {
-        top: 0;
-        left: 8%;
-      }
-
-      @media (min-width: map_get($MEDIA, MD)) {
-        top: -12%;
-        left: 0;
-        height: 84%;
-      }
-
-      @media (min-width: map_get($MEDIA, LG)) {
-        left: 4%;
-        top: -12%;
-        height: 90%;
-      }
+    @media (min-width: map_get($MEDIA, MD)) {
+      top: 56%;
+      left: 34%;
     }
 
-    &_ux {
-      position: absolute;
-      left: 36%;
-      top: 16%;
-
-      @media (min-width: map_get($MEDIA, SM)) {
-        left: 6%;
-        top: 24%;
-        height: 70%;
-      }
-
-      @media (min-width: map_get($MEDIA, MD)) {
-        left: 0;
-        top: 26%;
-      }
-
-      @media (min-width: map_get($MEDIA, LG)) {
-        left: 10%;
-        top: 32%;
-      }
+    @media (min-width: map_get($MEDIA, LG)) {
+      top: 54%;
+      left: 46%;
     }
+  }
 
-    &_brand {
-      position: absolute;
-      height: 100%;
+  &_ux {
+    position: absolute;
+    left: 12%;
+    right: 30%;
+    top: 32%;
 
-      @media (min-width: map_get($MEDIA, SM)) {
-        left: 24%;
-      }
-
-      @media (min-width: map_get($MEDIA, MD)) {
-        height: auto;
-      }
-
-      @media (min-width: map_get($MEDIA, LG)) {
-        width: 100%;
-      }
-    }
-
-    &_paper {
-      position: absolute;
-      height: 100%;
+    @media (min-width: map_get($MEDIA, SM)) {
+      left: 46%;
       right: 0;
-
-      @media (min-width: map_get($MEDIA, SM)) {
-        height: 90%;
-        right: 0;
-        top: 14%;
-      }
-
-      @media (min-width: map_get($MEDIA, MD)) {
-        left: 12%;
-      }
-
-      @media (min-width: map_get($MEDIA, LG)) {
-        left: 18%;
-      }
+      top: 8%;
     }
   }
+
+  &_brand {
+    position: absolute;
+    left: 48%;
+    top: 42%;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      top: 56%;
+      left: 4%;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      left: 10%;
+    }
+  }
+
+  &_paper {
+    position: absolute;
+    top: 30%;
+    left: 14%;
+    right: 20%;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      top: 6%;
+      left: 10%;
+      right: 20%;
+    }
+  }
+
+}
+
+&__img {
+
+  &_notebook {
+    position: absolute;
+    z-index: 1;
+    height: 108%;
+    top: 16%;
+    left: 30%;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      height: 132%;
+      top: 0;
+      left: 34%;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      height: auto;
+      left: 15%;
+      top: 29%;
+      min-width: 110%;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      top: 24%;
+      left: 10%;
+    }
+  }
+
+  &_mobile {
+    position: absolute;
+    z-index: 1;
+    height: 94%;
+    top: 26%;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      top: 0;
+      left: 8%;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      top: -12%;
+      left: 0;
+      height: 84%;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      left: 4%;
+      top: -12%;
+      height: 90%;
+    }
+  }
+
+  &_ux {
+    position: absolute;
+    left: 36%;
+    top: 16%;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      left: 6%;
+      top: 24%;
+      height: 70%;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      left: 0;
+      top: 26%;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      left: 10%;
+      top: 32%;
+    }
+  }
+
+  &_brand {
+    position: absolute;
+    height: 100%;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      left: 24%;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      height: auto;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      width: 100%;
+    }
+  }
+
+  &_paper {
+    position: absolute;
+    height: 100%;
+    right: 0;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      height: 90%;
+      right: 0;
+      top: 14%;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      left: 12%;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      left: 18%;
+    }
+  }
+}
+
 }
 

@@ -6,16 +6,19 @@
   align-items: center;
   justify-content: center;
 
-  @media (min-width: map_get($MEDIA, SM)) {
-    margin-top: 6rem;
-  }
+  &_margin_top {
 
-  @media (min-width: map_get($MEDIA, MD)) {
-    margin-top: 2rem;
-  }
+    @media (min-width: map_get($MEDIA, SM)) {
+      margin-top: 6rem;
+    }
 
-  @media (min-width: map_get($MEDIA, LG)) {
-    margin-top: 0;
+    @media (min-width: map_get($MEDIA, MD)) {
+      margin-top: 2rem;
+    }
+
+    @media (min-width: map_get($MEDIA, LG)) {
+      margin-top: 0;
+    }
   }
 
   &__content {

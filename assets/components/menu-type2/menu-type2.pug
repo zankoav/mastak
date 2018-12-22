@@ -1,0 +1,8 @@
+mixin swiperType2(name,...list)
+    div(class='swiper-' + name)
+        .container
+            div(class='swiper-container swiper-' + name + '__container')
+                ul(class='swiper-wrapper swiper-' + name + '__wrapper')
+                    each slide in list
+                        li(class='swiper-slide swiper-' + name + '__slide')
+                            a(class='swiper-' + name + '__link' href="#")= slide

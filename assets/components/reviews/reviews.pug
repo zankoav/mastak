@@ -1,5 +1,6 @@
-+header_description('reviews','our clients','black')
-.reviews
-    .reviews__inner
-        include ./../reviews_swiper/reviews_swiper
-        include ./../reviews_content/reviews_content
+mixin reviews()
+    +header_description('reviews','our clients','black')
+    .reviews
+        .reviews__inner
+            //+reviewsSwiper()
+            //+reviewsContent()

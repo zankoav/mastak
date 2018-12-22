@@ -1,29 +1,29 @@
-nav.menu
-
-    .menu__top
-        h3.menu__title menu
-        ul.menu__list
-            +menu_list_li(
-            1,
-            "our portfolio",
-            "what we do",
-            "reviews about us",
-            "our clients"
-            )
-    .menu__bottom
-        .menu__info
-            h4.menu__info-title Mastak Studio Chicago
-            p.menu__info-text 488 Madison Ave, New York, NY, 10022
-            p.menu__info-text.menu__info-text_phone +1 212 804 1300
-        .menu__info
-            h4.menu__info-title Mastak Studio Minsk
-            p.menu__info-text Libknekhta 66A str., Minsk, Belarus, 100220
-            p.menu__info-text.menu__info-text_phone +375 29 123-45-67
-            a.menu__info-text.menu__info-text_link(href="mailto:info@mastak.com") info@mastak.com
-        .menu__info.menu__info_social
-            +menu_info_socials(
-            require("./../images/vk.svg"),
-            require("./../images/instagram.svg"),
-            require("./../images/twitter-logo.svg"),
-            require("./../images/facebook-logo.svg")
-            )
+mixin menu()
+    nav.menu
+        .menu__top
+            h3.menu__title menu
+            ul.menu__list
+                +menuList(
+                1,
+                "our portfolio",
+                "what we do",
+                "reviews about us",
+                "our clients"
+                )
+        .menu__bottom
+            .menu__info
+                h4.menu__info-title Mastak Studio Chicago
+                p.menu__info-text 488 Madison Ave, New York, NY, 10022
+                p.menu__info-text.menu__info-text_phone +1 212 804 1300
+            .menu__info
+                h4.menu__info-title Mastak Studio Minsk
+                p.menu__info-text Libknekhta 66A str., Minsk, Belarus, 100220
+                p.menu__info-text.menu__info-text_phone +375 29 123-45-67
+                a.menu__info-text.menu__info-text_link(href="mailto:info@mastak.com") info@mastak.com
+            .menu__info.menu__info_social
+                +menInfoSocials(
+                require("./../images/vk.svg"),
+                require("./../images/instagram.svg"),
+                require("./../images/twitter-logo.svg"),
+                require("./../images/facebook-logo.svg")
+                )

@@ -1,0 +1,9 @@
+mixin swiper(name,...list)
+    div(class='swiper-' + name)
+        div(class='swiper-container swiper-' + name + '__container')
+            div(class='swiper-wrapper swiper-' + name + '__wrapper')
+                each slide in list
+                    a(class='swiper-slide swiper-' + name + '__slide' href="#")
+                        span= slide
+        div(class='swiper-' + name + '__underline')
+            span(class='swiper-' + name + '__underline_span')

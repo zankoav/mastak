@@ -1,6 +1,7 @@
 @import './../constants';
 
 .menu {
+    z-index: 1;
     position: fixed;
     top: 0;
     right: -100vw;
@@ -36,6 +37,7 @@
 
     &_active {
         right: 0;
+        z-index: 1;
     }
 
     &__top {
@@ -94,11 +96,89 @@
 
         @media (min-width: map_get($MEDIA, SM)) {
             padding: 1rem 0;
+
+            &:nth-child(1){
+                transform: translateX(-1em);
+            }
+
+            &:nth-child(2){
+                transform: translateX(-2rem);
+            }
+
+            &:nth-child(3){
+                transform: translateX(-3rem);
+            }
+
+            &:nth-child(4){
+                transform: translateX(-4rem);
+            }
+
+            &:nth-child(5){
+                transform: translateX(-5rem);
+            }
+
+            &:nth-child(6){
+                transform: translateX(-6rem);
+            }
+
+            &:nth-child(7){
+                transform: translateX(-7rem);
+            }
+
+            &:nth-child(8){
+                transform: translateX(-8rem);
+            }
+
+            &:nth-child(9){
+                transform: translateX(-9rem);
+            }
+
+            &:nth-child(10){
+                transform: translateX(-10rem);
+            }
         }
 
-        &_active {
-            .menu__list-item-link {
-                color: $DARK-RED;
+        @media (min-width: map_get($MEDIA, HD)) {
+            padding: 1rem 0;
+
+            &:nth-child(1){
+                transform: translateX(-.5rem);
+            }
+
+            &:nth-child(2){
+                transform: translateX(-1.25rem);
+            }
+
+            &:nth-child(3){
+                transform: translateX(-2rem);
+            }
+
+            &:nth-child(4){
+                transform: translateX(-2.75rem);
+            }
+
+            &:nth-child(5){
+                transform: translateX(-3.5rem);
+            }
+
+            &:nth-child(6){
+                transform: translateX(-4.25rem);
+            }
+
+            &:nth-child(7){
+                transform: translateX(-5rem);
+            }
+
+            &:nth-child(8){
+                transform: translateX(-5.75rem);
+            }
+
+            &:nth-child(9){
+                transform: translateX(-6.5rem);
+            }
+
+            &:nth-child(10){
+                transform: translateX(-7.25rem);
             }
         }
 
@@ -111,6 +191,12 @@
         text-transform: uppercase;
         color: $DARK-GRAY;
         font-weight: bold;
+
+        &:hover {
+            transition: all .6s ease-out;
+            color: $RED;
+        }
+
 
         @media (min-width: map_get($MEDIA, SM)) {
             font-size: 27px;
@@ -175,6 +261,4 @@
             margin-right: 1rem;
         }
     }
-
-
 }

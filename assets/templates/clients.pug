@@ -1,7 +1,7 @@
-include ./../components/mixins/mixins
+include ./../mixins
 include ./../components/head
 body
-    +headerType2('our','clients')
+    +headerType2('our','clients','container')
     +clients('clientCard',{
         url_img: require("./../images/mtb-bg@3x.png"),
         href: "#",
@@ -80,4 +80,4 @@ body
         url_icon: require("./../images/logo-icon@3x.png")
     }
     )
-    include ./../components/copyright/copyright
+    +copyright('Copyright 2018 © All Rights Reserved.')

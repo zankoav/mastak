@@ -5,7 +5,6 @@ import $ from 'jquery';
 $('.portfolios__show-more-button').on('click', function (event) {
 
     event.preventDefault();
-    console.log('click me');
 
     let $items = $('.portfolio-card_added');
 

@@ -41,7 +41,6 @@
       right: 3.25rem;
     }
   ;
-    margin-bottom: .5rem;
     width: 100%;
 
     @media (min-width: map_get($MEDIA, SM)) {
@@ -89,12 +88,12 @@
 
     @media (min-width: map_get($MEDIA, SM)) {
       position: relative;
-      bottom: 4.5rem;
+      margin-top: .5rem;
     }
 
     @media (min-width: map_get($MEDIA, MD)) {
-      position: relative;
-      bottom: 4rem;
+      margin-top: 0;
+      margin-bottom: .5rem;
     }
   }
 
