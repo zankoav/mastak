@@ -1,20 +1,21 @@
-.portfolio
-    .swiper-container.portfolio__image-slider
-        +header_description('our','portfolio','white','header-description_portfolio')
-        .swiper-wrapper.portfolio__image-wrapper
-            +portfolio_image_slide(
-                require('./../images/background-slider.png'),
-                require('./../images/alfa.png'),
-                require('./../images/bsb.png'),
-                require('./../images/bsb.png'),
-                require('./../images/bg.png')
-            )
-    .swiper-container.portfolio__menu-slider
-        .swiper-wrapper
-            +portfolio_menu_slide(require('./../images/alfa.png'), "Molotok1", "Molotok2", "Molotok3", "Molotok4", "Molotok4")
-        .portfolio__menu-navigation
-            a.portfolio__menu-slider-prev(href="#")
-            span.portfolio__menu-slider-couner
-                span.portfolio__menu-slider-index= '01'
-                span.portfolio__menu-slider-size= '04'
-            a.portfolio__menu-slider-next(href="#")
+mixin portfolio()
+    .portfolio
+        .swiper-container.portfolio__image-slider
+            +header_description('our','portfolio','white','header-description_portfolio')
+            .swiper-wrapper.portfolio__image-wrapper
+                +portfolio_image_slide(
+                    require('./../images/background-slider.png'),
+                    require('./../images/alfa.png'),
+                    require('./../images/bsb.png'),
+                    require('./../images/bsb.png'),
+                    require('./../images/bg.png')
+                )
+        .swiper-container.portfolio__menu-slider
+            .swiper-wrapper
+                +portfolio_menu_slide(require('./../images/alfa.png'), "Molotok1", "Molotok2", "Molotok3", "Molotok4", "Molotok4")
+            .portfolio__menu-navigation
+                a.portfolio__menu-slider-prev(href="#")
+                span.portfolio__menu-slider-couner
+                    span.portfolio__menu-slider-index= '01'
+                    span.portfolio__menu-slider-size= '04'
+                a.portfolio__menu-slider-next(href="#")

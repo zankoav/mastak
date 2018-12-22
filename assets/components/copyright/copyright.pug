@@ -1,2 +1,4 @@
-.copyright
-    span.copyright__content Copyright 2018 © All Rights Reserved.
+mixin copyright(text,mod)
+    - var cMod = mod ? mod : ''
+    div(class=`copyright ${cMod}`)
+        span.copyright__content= text

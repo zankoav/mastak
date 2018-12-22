@@ -1,0 +1,8 @@
+mixin portfolio_menu_slide(logo_url, ...title_list)
+    each title in title_list
+        .swiper-slide.portfolio-menu-slide
+            .portfolio-menu-slide__inner
+                h2.portfolio-menu-slide__title= title
+                p.portfolio-menu-slide__description= "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam culpa exercitationem incidunt ipsam itaque porro saepe voluptates."
+                a.portfolio-menu-slide__link(href='#') view
+                img.portfolio-menu-slide__logo(src= logo_url)

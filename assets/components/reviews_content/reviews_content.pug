@@ -1,18 +1,19 @@
-.reviews-content
-    .reviews-content__swiper
-        .swiper-container.reviews-content__container
-            .swiper-wrapper.reviews-content__wrapper
-                .swiper-slide.reviews-content__slide
-                    span.reviews-content__text I really enjoyed the experience. The course was professionally run, very informative, interactive and fun. The learning centered on good technique and client safety which is vitally important for the professional standing of the trainer and the fitness industry in general. The creation and practice of specific but simple drills to help clients gain greater levels of fitness was terrific as it will assist the trainer to practically implement this new skill immediately.
-                    .reviews-content__name edik
-                    .reviews-content__address minsk
-                .swiper-slide.reviews-content__slide
-                    span.reviews-content__text When enabled autoplay will wait for wrapper transition to continue. Can be disabled in case of using Virtual Translate when your slider may not have transition
-                .swiper-slide.reviews-content__slide
-                    span.reviews-content__text By default, Swiper will load lazy images after transition to this slide, so you may enable this parameter if you need it to start loading of new image in the beginning of transition
-                .swiper-slide.reviews-content__slide
-                    span.reviews-content__text Function to render slide. As an argument it accepts current slide item for slides array and index number of the current slide. Function must return an outter HTML of the swiper slide.
-                .swiper-slide.reviews-content__slide
-                    span.reviews-content__text Multiplier of mousewheel data, allows to tweak mouse wheel sensitivity
-                .swiper-slide.reviews-content__slide
-                    span.reviews-content__text Set to true to force mousewheel swipes to axis. So in horizontal mode mousewheel will work only with horizontal mousewheel scrolling, and only with vertical scrolling in vertical mode.
+mixin reviewsContent()
+    .reviews-content
+        .reviews-content__swiper
+            .swiper-container.reviews-content__container
+                .swiper-wrapper.reviews-content__wrapper
+                    .swiper-slide.reviews-content__slide
+                        span.reviews-content__text I really enjoyed the experience. The course was professionally run, very informative, interactive and fun. The learning centered on good technique and client safety which is vitally important for the professional standing of the trainer and the fitness industry in general. The creation and practice of specific but simple drills to help clients gain greater levels of fitness was terrific as it will assist the trainer to practically implement this new skill immediately.
+                        .reviews-content__name edik
+                        .reviews-content__address minsk
+                    .swiper-slide.reviews-content__slide
+                        span.reviews-content__text When enabled autoplay will wait for wrapper transition to continue. Can be disabled in case of using Virtual Translate when your slider may not have transition
+                    .swiper-slide.reviews-content__slide
+                        span.reviews-content__text By default, Swiper will load lazy images after transition to this slide, so you may enable this parameter if you need it to start loading of new image in the beginning of transition
+                    .swiper-slide.reviews-content__slide
+                        span.reviews-content__text Function to render slide. As an argument it accepts current slide item for slides array and index number of the current slide. Function must return an outter HTML of the swiper slide.
+                    .swiper-slide.reviews-content__slide
+                        span.reviews-content__text Multiplier of mousewheel data, allows to tweak mouse wheel sensitivity
+                    .swiper-slide.reviews-content__slide
+                        span.reviews-content__text Set to true to force mousewheel swipes to axis. So in horizontal mode mousewheel will work only with horizontal mousewheel scrolling, and only with vertical scrolling in vertical mode.

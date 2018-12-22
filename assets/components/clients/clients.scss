@@ -1,4 +1,4 @@
-@import "./../../components/constants";
+@import "./../constants";
 
 .clients {
   padding: {
@@ -37,9 +37,7 @@
     padding: {
       left: 3.25rem;
       right: 3.25rem;
-      bottom: 2.75rem;
-    }
-  ;
+    };
     width: 100%;
 
     @media (min-width: map_get($MEDIA, SM)) {
@@ -47,27 +45,24 @@
       padding: {
         left: 1rem;
         right: 1rem;
-        bottom: 1.5rem;
-      }
-    ;
+        //bottom: 1.5rem;
+      };
     }
 
     @media (min-width: map_get($MEDIA, MD)) {
       padding: {
         left: 1.5rem;
         right: 1.5rem;
-        bottom: 2.25rem;
-      }
-    ;
+        //bottom: 2.25rem;
+      };
     }
 
     @media (min-width: map_get($MEDIA, LG)) {
       padding: {
         left: 2.5rem;
         right: 2.5rem;
-        bottom: 5rem;
-      }
-    ;
+        //bottom: 5rem;
+      };
     }
 
     &:nth-child(3n+2) {
@@ -91,12 +86,12 @@
 
     @media (min-width: map_get($MEDIA, SM)) {
       position: relative;
-      bottom: 4.5rem;
+      margin-top: 1rem;
     }
 
-    @media (min-width: map_get($MEDIA, MD)) {
-      position: relative;
-      bottom: 4rem;
+    @media (min-width: map_get($MEDIA, LG)) {
+      margin-top: 0;
+      margin-bottom: 2rem;
     }
   }
 

@@ -3,6 +3,7 @@
 .swiper-menu {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   &:after {
     content: "";
@@ -14,6 +15,7 @@
   }
 
   &__container {
+    position: relative;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -37,15 +39,16 @@
     font-size: 1rem;
     font-weight: 300;
 
+
     &_active {
       position: relative;
-      background-color: $WHITE;
-      padding: 0 1rem 1rem;
-      font-weight: normal;
+      //background-color: $WHITE;
+      //padding: 0 1rem 1rem;
+      //font-weight: normal;
 
       &:before {
         position: absolute;
-        content: "";
+        //content: "";
         width: calc(100% - 2rem);
         height: 3px;
         border-radius: 2px;
@@ -72,6 +75,29 @@
 
     @media (min-width: map_get($MEDIA, LG)) {
       padding: 0 3rem 1rem;
+    }
+  }
+
+  &__underline {
+    position: relative;
+
+    &_span {
+      position: absolute;
+      height: 3px;
+      width: 0;
+      border-radius: 2px;
+      background-color: $WHITE;
+      bottom: 0;
+      //transition: all .4s ease-out;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: calc(100% - 48px);
+        left: 24px;
+        height: 100%;
+        background-color: #e70606;
+      }
     }
   }
 

@@ -1,4 +1,4 @@
-@import "./../../components/constants";
+@import "./../constants";
 
 .client-card {
   display: flex;
@@ -9,9 +9,19 @@
   position: relative;
   overflow: hidden;
   justify-content: center;
+  margin-bottom: 2.75rem;
+
+  @media (min-width: map_get($MEDIA, SM)) {
+    margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: map_get($MEDIA, MD)) {
+    margin-bottom: 2.25rem;
+  }
 
   @media (min-width: map_get($MEDIA, LG)) {
     height: 300px;
+    margin-bottom: 5rem;
   }
 
   &:hover {

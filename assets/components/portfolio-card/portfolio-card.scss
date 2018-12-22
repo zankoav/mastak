@@ -8,12 +8,12 @@ $FOOTER_HEIGHT: 100px;
 
   @media (min-width: map_get($MEDIA, MD)) {
     height: 600px;
+    margin-bottom: 1.5rem;
   }
 
   @media (min-width: map_get($MEDIA, LG)) {
     height: 700px;
   }
-
 
   &_added{
     display: none;
@@ -28,7 +28,6 @@ $FOOTER_HEIGHT: 100px;
     transition: .4s ease-in-out;
 
     &:hover {
-
       transform: scale(1.025);
     }
   }

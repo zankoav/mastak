@@ -34,7 +34,7 @@
     max-height: 60px;
     max-width: initial;
     border-radius: 50%;
-    transition: all .6s; //изменил здесь
+    transition: all .6s;
 
     @media (min-width: map_get($MEDIA, SM)) {
       height: 100%;

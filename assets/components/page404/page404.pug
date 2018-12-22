@@ -1,8 +1,9 @@
-.page404.page404_theme_mastak
-    img.page404__shadow.page404__shadow_right-top(src=require("./../../images/showdow-logo-lg.png"))
-    .container.page404__content.page404__content_main
-        .page404__message.page404__message_content
-            .page404__message.page404__message_error
-                span.page404__text404.page404__text404_text 404
-            .page404__description.page404__description_text A mistake. We do not have such a page..
-        .page404__copyright.page404__copyright_bottom Copyright 2018 © All Rights Reserved.
+mixin page404()
+    .page404.page404_theme_mastak
+        img.page404__shadow.page404__shadow_right-top(src=require("./../images/showdow-logo-lg.png"))
+        .container.page404__content.page404__content_main
+            .page404__message.page404__message_content
+                .page404__message.page404__message_error
+                    span.page404__text404.page404__text404_text 404
+                .page404__description.page404__description_text A mistake. We do not have such a page..
+            .page404__copyright.page404__copyright_bottom Copyright 2018 © All Rights Reserved.

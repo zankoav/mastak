@@ -1,0 +1,4 @@
+mixin portfolio_image_slide(...image_list)
+    each item in image_list
+        .swiper-slide.portfolio__image-slider-slide
+            .portfolio__image-slider-slide-inner(style={'background-image': 'url(' + item + ')'})

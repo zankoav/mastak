@@ -1,0 +1,7 @@
+mixin portfolioCard(classAdded,data)
+    div(class='portfolio-card' + ' ' + classAdded)
+        a.portfolio-card__parallax-block(href= data.href, target='_blank')
+            img.portfolio-card__img(src= data.img_url)
+        .portfolio-card__footer
+            a.portfolio-card__title(href= data.href, target='_blank')= data.title
+            span.portfolio-card__subtitle= data.subtitle

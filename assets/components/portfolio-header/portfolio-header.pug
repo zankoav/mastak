@@ -1,0 +1,12 @@
+mixin portfolioHeader(textLeft,texrtight)
+    .portfolio-header
+        .portfolio-header__inner
+            a(class='portfolio-header__logo' href='#')
+                img.portfolio-header__img_logo(src=require("./../images/logo.png"))
+            .portfolio-header__text
+                span.portfolio-header__text-left= textLeft
+                span.portfolio-header__text-right= texrtight
+        +menu()
+        a(class='portfolio-header__burger' href='#')
+            span.portfolio-header__line-burger
+            span.portfolio-header__line-burger
