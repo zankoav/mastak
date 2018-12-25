@@ -1,12 +1,20 @@
 <?php
 
-	define( "THEME_DIR", get_template_directory() );
-	define( "THEME_URI", get_template_directory_uri() );
+define('BASE_URL', '/wp-content/themes/' . get_template());
+define("THEME_NAME", get_template());
 
-	define( "ASSETS", THEME_DIR . '/src/assets.json' );
+require_once __DIR__ . '/utils/Lang.php';
+require_once __DIR__ . '/utils/Assets.php';
+require_once __DIR__ . '/utils/SingletonOptions.php';
 
-	define( "THEME_NAME", "mastak" );
+require_once __DIR__ . '/core/addCss.php';
+require_once __DIR__ . '/core/addScripts.php';
+require_once __DIR__ . '/core/menu.php';
 
-	require_once THEME_DIR . '/core/init_theme.php';
-	require_once THEME_DIR . '/core/custom_types.php';
-	require_once THEME_DIR . '/core/contact_form7.php';
+require_once __DIR__ . '/core/cmb2/themeSettings.php';
+
+require_once __DIR__ . '/core/customTypes/Work.php';
+require_once __DIR__ . '/core/cmb2/workFields.php';
+
+require_once __DIR__ . '/core/customTypes/Customer.php';
+require_once __DIR__ . '/core/cmb2/customerFields.php';
