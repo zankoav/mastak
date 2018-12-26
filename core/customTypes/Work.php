@@ -15,7 +15,7 @@ function register_post_types(){
       'not_found'          => 'Не найдено', // если в результате поиска ничего не было найдено
       'not_found_in_trash' => 'Не найдено в корзине', // если не было найдено в корзине
       'parent_item_colon'  => '', // для родителей (у древовидных типов)
-      'menu_name'          => 'work', // название меню
+      'menu_name'          => 'works', // название меню
     ),
     'description'         => '',
     'public'              => true,
@@ -35,7 +35,7 @@ function register_post_types(){
     //'hierarchical'        => false,
     'supports'            => array('title','editor'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
     //'taxonomies'          => array(),
-    'has_archive'         => false,
+    'has_archive'         => true,
     'rewrite'             => true,
     'query_var'           => true,
   ) );
@@ -45,7 +45,7 @@ function register_post_types(){
 add_action('init', 'work_type_taxonomy');
 function work_type_taxonomy(){
   // список параметров: http://wp-kama.ru/function/get_taxonomy_labels
-  register_taxonomy('work_type', array('work'), array(
+  register_taxonomy('portfolio', array('work'), array(
     'label'                 => 'work type', // определяется параметром $labels->name
     'labels'                => array(
       'name'              => 'work types',
