@@ -2,6 +2,11 @@ include ./../mixins
 include ./../components/head
 body
     +headerType2('our','clients','container')
+    div(data-active-menu=0)
+    +swiper('menu',
+    "Our clients",
+    "Reviews about us"
+    )
     +clients('clientCard',{
         url_img: require("./../images/mtb-bg@3x.png"),
         href: "#",

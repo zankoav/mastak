@@ -1,18 +1,24 @@
 @import "./../constants";
 
-$FOOTER_HEIGHT: 100px;
+$FOOTER_HEIGHT: 120px;
+$FOOTER_MIN_HEIGHT: 60px;
 
 .portfolio-card {
   height: 500px;
   display: block;
 
+  @media (min-width: map_get($MEDIA, SM)) {
+    margin-bottom: -2rem;
+  }
+
   @media (min-width: map_get($MEDIA, MD)) {
     height: 600px;
-    margin-bottom: 1.5rem;
+    margin-bottom: .5rem;
   }
 
   @media (min-width: map_get($MEDIA, LG)) {
     height: 700px;
+    margin-bottom: 2rem;
   }
 
   &_added{
@@ -40,8 +46,16 @@ $FOOTER_HEIGHT: 100px;
   &__footer {
     display: flex;
     flex-direction: column;
-    height: $FOOTER_HEIGHT;
+    height: $FOOTER_MIN_HEIGHT;
     padding-top: 1rem;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      padding-top: 0;
+    }
+
+    @media (min-width: map_get($MEDIA, MD)) {
+      padding-top: 1rem;
+    }
   }
 
   &__title {

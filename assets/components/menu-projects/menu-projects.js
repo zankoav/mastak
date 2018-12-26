@@ -21,28 +21,23 @@ $(window).resize(function () {
 
 $($('.swiper-menu__slide')[activeMenu]).addClass('swiper-menu__slide_active');
 
-
 let $activeItem = $('.swiper-menu__slide_active span');
 let delta = 32;
 let leftItem = $activeItem.offset().left;
 let left = leftItem - delta + $activeItem.width()/2,
     width = $activeItem.width() + 2 * delta;
 
-
-
     $('.swiper-menu__underline span').css({
         'margin-left': left + delta,
         'width': 0,
-        'transition': 'all 1s ease-in-out'
+        'transition': 'all .6s ease-in-out'
     });
-
 
     $('.swiper-menu__underline span').css({
         'margin-left': (leftItem - delta),
         'width': width ,
-        'transition': 'all 1s ease-in-out'
+        'transition': 'all .6s ease-in-out'
     });
-
 
 function getSlider() {
 
@@ -53,14 +48,22 @@ function getSlider() {
     $('.swiper-menu__underline span').css({
         'margin-left': left,
         'width': width,
-
     });
 }
 
 $('.swiper-menu__wrapper .swiper-menu__slide').hover(getSlider);
 
+$('.swiper-menu__wrapper .swiper-menu__slide ').mouseout(function () {
 
-// $('.swiper-menu__wrapper .swiper-menu__slide').hover(function () {
-//     $($('.swiper-menu__slide')[activeMenu]).addClass('swiper-menu__underline');
-//
-// });
+    $('.swiper-menu__underline span').css({
+        'margin-left': left + delta,
+        'width': 0,
+        'transition': 'all .6s ease-in-out'
+    });
+
+    $('.swiper-menu__underline span').css({
+        'margin-left': (leftItem - delta),
+        'width': width ,
+        'transition': 'all .6s ease-in-out'
+    });
+});

@@ -12,6 +12,11 @@
     bottom: 2px;
     width: 100%;
     border-bottom: 1px solid #9b9b9b;
+    padding-top: 1rem;
+
+    @media (min-width: map_get($MEDIA, SM)) {
+      padding-top: 0;
+    }
   }
 
   &__container {
@@ -38,17 +43,20 @@
     white-space: nowrap;
     font-size: 1rem;
     font-weight: 300;
-
+    font-family: 'Open Sans',sans-serif;
+    color: #4a4a4a;
 
     &_active {
       position: relative;
-      //background-color: $WHITE;
-      //padding: 0 1rem 1rem;
-      //font-weight: normal;
+      font-weight: 600;
+      color: #e70606;
+
+      @media (min-width: map_get($MEDIA, SM)) {
+        color: #4a4a4a;
+      }
 
       &:before {
         position: absolute;
-        //content: "";
         width: calc(100% - 2rem);
         height: 3px;
         border-radius: 2px;
@@ -66,15 +74,15 @@
     }
 
     @media (min-width: map_get($MEDIA, SM)) {
-      padding: 0 1rem 1rem;
+      margin: 0 1rem 1rem;
     }
 
     @media (min-width: map_get($MEDIA, MD)) {
-      padding: 0 2.5rem 1rem;
+      margin: 0 2.5rem 1rem;
     }
 
     @media (min-width: map_get($MEDIA, LG)) {
-      padding: 0 3rem 1rem;
+      margin: 0 3rem 1rem;
     }
   }
 
@@ -83,12 +91,14 @@
 
     &_span {
       position: absolute;
-      height: 3px;
       width: 0;
       border-radius: 2px;
       background-color: $WHITE;
       bottom: 0;
-      //transition: all .4s ease-out;
+
+      @media (min-width: map_get($MEDIA, SM)) {
+        height: 3px;
+      }
 
       &:after {
         position: absolute;
@@ -97,16 +107,9 @@
         left: 24px;
         height: 100%;
         background-color: #e70606;
+
       }
     }
   }
 
-  &__link {
-    color: #4a4a4a;
-
-    &:hover {
-      color: #e70606;
-      transition: all .6s ease;
-    }
-  }
 }
