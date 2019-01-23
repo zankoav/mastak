@@ -59,7 +59,7 @@ $works_count = count( $works_meta );
 		<div class="swiper-wrapper swiper-menu__wrapper">
 			<?php foreach ( $terms as $term ) : ?>
 
-			<a class="swiper-slide swiper-menu__slide <?=($term->term_id == get_queried_object()->term_id)? 'swiper-slide-active':''?>"
+			<a class="swiper-slide swiper-menu__slide <?=($term->term_id == get_queried_object()->term_id)? 'swiper-menu__slide_active':''?>"
 			   href="<?=get_term_link($term->term_id);?>">
 				<span><?=$term->name;?></span>
 			</a>
