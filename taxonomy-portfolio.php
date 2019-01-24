@@ -33,7 +33,10 @@ foreach ( $works as $item ) {
 }
 
 $works_count = count( $works_meta );
-
+for ($i = 0; $i < count($terms); $i++){
+	if($terms[$i]->term_id == get_queried_object()->term_id)
+		$current_term_index = $i;
+}
 
 ?>
 <header class="header container">
@@ -52,15 +55,13 @@ $works_count = count( $works_meta );
 	<a class="header__burger" href="#"><span class="header__line-burger"></span><span
 			class="header__line-burger"></span></a>
 </header>
-
-<div data-active-menu="2"></div>
+<div data-active-menu="<?= $current_term_index;?>"></div>
 <div class="swiper-menu">
 	<div class="swiper-container swiper-menu__container">
 		<div class="swiper-wrapper swiper-menu__wrapper">
 			<?php foreach ( $terms as $term ) : ?>
 
-			<a class="swiper-slide swiper-menu__slide <?=($term->term_id == get_queried_object()->term_id)? 'swiper-menu__slide_active':''?>"
-			   href="<?=get_term_link($term->term_id);?>">
+			<a class="swiper-slide swiper-menu__slide " href="<?=get_term_link($term->term_id);?>">
 				<span><?=$term->name;?></span>
 			</a>
 			<?php endforeach;?>
@@ -122,6 +123,7 @@ $works_count = count( $works_meta );
 		</div>
 	<?php endif;?>
 </div>
+<div class="copyright copyright_margin_top"><span class="copyright__content">Copyright 2018 © All Rights Reserved.</span></div>
 
 
 <?php
