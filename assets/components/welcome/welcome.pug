@@ -1,0 +1,18 @@
+mixin welcome()
+    .welcome(style=`background-image:url(${require("./../images/krasnogorka-bg-image.png")})`)
+        .container
+            .welcome__inner
+                .welcome__title(style={color: '#fff'}) Редизайн сайта базы отдыха Красногорка
+                .welcome__logo
+                    img.welcome__photos-image(src=require('./../images/krasnogorka.svg'))
+            .welcome__wrapper
+                .welcome__notebook
+                    img.welcome__notebook-image(src=require('./../images/pk.png'))
+                    img.welcome__addition-image(src=require('./../images/forest.png'))
+                    .welcome__main-notebook
+                        img.welcome__main-notebook-image(src=require('./../images/main-notebook.png'))
+                    .welcome__phone
+                        img.welcome__phone-image(src=require('./../images/iphone-kg.png'))
+                        .welcome__main-iphone
+                            img.welcome__main-iphone-image(src=require('./../images/main-iphone.png'))
+                    img.welcome__shadow(src=require('./../images/shadow.svg'))

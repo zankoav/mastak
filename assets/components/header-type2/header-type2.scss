@@ -1,4 +1,5 @@
 @import "./../constants";
+$WHITE: #FFF;
 
 .header {
   height: 60px;
@@ -9,6 +10,10 @@
 
   @media (min-width: map_get($MEDIA, SM)) {
     height: 100px;
+  }
+
+  &__shell {
+    background-color: $WHITE;
   }
 
   &__inner {
