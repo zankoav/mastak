@@ -1,31 +1,32 @@
-mixin technologies(addition)
+mixin technologies(mod)
+    - var cMod = mod ? mod : ''
     .technologies
         .container
             ul.technologies__list
                 li.technologies__item
                     span.technologies__name HTML5
-                    span( class ='technologies__addition technologies__addition_' + addition)
+                    span( class =`technologies__addition ${cMod}`)
                 li.technologies__item
                     span.technologies__name CSS3
-                    span( class ='technologies__addition technologies__addition_' + addition)
+                    span( class =`technologies__addition ${cMod}`)
                 li.technologies__item
                     span.technologies__name SASS
-                    span( class ='technologies__addition technologies__addition_' + addition)
+                    span( class =`technologies__addition ${cMod}`)
                 li.technologies__item
                     span.technologies__name JavaScript (ES6)
-                    span( class ='technologies__addition technologies__addition_' + addition)
+                    span( class =`technologies__addition ${cMod}`)
                 li.technologies__item
                     span.technologies__name Project
-                    span( class ='technologies__addition technologies__addition_' + addition)
+                    span( class =`technologies__addition ${cMod}`)
                 li.technologies__item
                     span.technologies__name Webpack4
-                    span( class ='technologies__addition technologies__addition_' + addition)
+                    span( class =`technologies__addition ${cMod}`)
                 li.technologies__item
                     span.technologies__name jQuery3
-                    span( class ='technologies__addition technologies__addition_' + addition)
+                    span( class =`technologies__addition ${cMod}`)
                 li.technologies__item
                     span.technologies__name PHP7
-                    span( class ='technologies__addition technologies__addition_' + addition)
+                    span( class =`technologies__addition ${cMod}`)
                 li.technologies__item
                     span.technologies__name Git
-                    span( class ='technologies__addition technologies__addition_' + addition)
+                    span( class =`technologies__addition ${cMod}`)
