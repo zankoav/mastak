@@ -7,8 +7,10 @@ let oneItem = $(".technologies__list").width() / countItem;
 if ($(window).width() > 767) {
     $(".technologies__item").css("width", oneItem);
 }
+let startColor = $(".technologies__list").data('color-start');
+let endColor = $(".technologies__list").data('color-end');
 
-var colorArray = interpolateColors("rgb(195, 234, 33)", "rgb(0, 102, 207)", countItem);
+var colorArray = interpolateColors(startColor, endColor, countItem);
 
 for (let i = 0; i < countItem; i++) {
 
