@@ -29,7 +29,8 @@ let entries = {
     home: './home.js',
     portfolio: './portfolio.js',
     clients: './clients.js',
-    services: './services.js'
+    services: './services.js',
+    krasnogorkaPortfolio: './krasnogorkaPortfolio.js'
 };
 
 let pugs = {
@@ -50,13 +51,15 @@ let pugs = {
     },
     services: {
         services: "clients title"
+    },
+    krasnogorkaPortfolio: {
+        krasnogorkaPortfolio: "krasnogorkaPortfolio title"
     }
 };
 
 const NODE_ENV = process.env.NODE_ENV;
-const DEV_MODE = NODE_ENV == 0;
+const DEV_MODE = NODE_ENV === 0;
 const WP = NODE_ENV === "wp-production";
-
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');

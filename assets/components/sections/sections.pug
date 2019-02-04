@@ -1,0 +1,13 @@
+mixin sections()
+    .sections
+        .sections__item
+            img.sections__image(src=require('./../images/krasnogorka-bg-image.png'))
+            .sections__wrapper
+                .container
+                    +subtitle('Technologies used','right')
+                    +technologies()
+        .sections__item
+            img.sections__image(src=require('./../images/krasnogorka-bg-image.png'))
+            .sections__wrapper
+                .container
+                    +subtitle('Color','left')

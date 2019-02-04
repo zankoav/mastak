@@ -1,0 +1,281 @@
+@import "./../constants";
+
+
+@mixin animationItem($time) {
+  animation-delay: $time;
+}
+
+.technologies {
+  padding-top: 2rem;
+
+  @media (min-width: map-get($MEDIA, SM)) {
+    padding-top: 4rem;
+  }
+
+  @media (min-width: map-get($MEDIA, MD)) {
+    padding-top: 5rem;
+  }
+
+  @media (min-width: map-get($MEDIA, LG)) {
+    padding-top: 7rem;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+
+    @media (min-width: map-get($MEDIA, SM)) {
+      flex-direction: row;
+    }
+
+    &_anim_list {
+      animation: animationTechnologies 1s;
+      animation-fill-mode: forwards;
+    }
+
+    &_anim_listReverse {
+      animation: animationItemReverse 2s;
+      animation-fill-mode: backwards;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 100%;
+      background: linear-gradient(to bottom, #c3ea21, #0066cf);
+
+      @media (min-width: map-get($MEDIA, SM)) {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, #c3ea21, #0066cf);
+      }
+    }
+  }
+
+  &__item {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    opacity: 0;
+    z-index: 1;
+
+    &_anim_item {
+      animation: animationItem .25s;
+      animation-fill-mode: forwards;
+
+      &:nth-child(1) {
+        @include animationItem(1.25s);
+      }
+
+      &:nth-child(2) {
+        @include animationItem(1s);
+      }
+
+      &:nth-child(3) {
+        @include animationItem(.75s);
+      }
+
+      &:nth-child(4) {
+        @include animationItem(.5s);
+      }
+
+      &:nth-child(5) {
+        @include animationItem(.25s);
+      }
+
+      &:nth-child(6) {
+        @include animationItem(.5s);
+      }
+
+      &:nth-child(7) {
+        @include animationItem(.75s);
+      }
+
+      &:nth-child(8) {
+        @include animationItem(1s);
+      }
+
+      &:nth-child(9) {
+        @include animationItem(1.25s);
+      }
+    }
+
+    &_anim_itemReverse {
+      animation: animationItemReverse .25s;
+      animation-fill-mode: backwards;
+
+      &:nth-child(1) {
+        @include animationItem(.25s);
+      }
+
+      &:nth-child(2) {
+        @include animationItem(.5s);
+      }
+
+      &:nth-child(3) {
+        @include animationItem(.75s);
+      }
+
+      &:nth-child(4) {
+        @include animationItem(1s);
+      }
+
+      &:nth-child(5) {
+        @include animationItem(1.25s);
+      }
+
+      &:nth-child(6) {
+        @include animationItem(1s);
+      }
+
+      &:nth-child(7) {
+        @include animationItem(.75s);
+      }
+
+      &:nth-child(8) {
+        @include animationItem(.5s);
+      }
+
+      &:nth-child(9) {
+        @include animationItem(.25s);
+      }
+    }
+
+    @media (min-width: map-get($MEDIA, SM)) {
+      height: 110px;
+      max-width: calc(100% / 9);
+    }
+
+    &:nth-child(2n) {
+      .technologies__name {
+        align-self: flex-end;
+        text-align: right;
+        margin-right: 10rem;
+        width: 100px;
+      }
+
+      @media (min-width: map-get($MEDIA, SM)) {
+
+        .technologies__name {
+          align-self: flex-end;
+          text-align: initial;
+          margin-right: initial;
+          width: initial;
+        }
+      }
+    }
+
+    &:nth-child(2n + 1) {
+
+      .technologies__name {
+        display: flex;
+        align-items: flex-end;
+        align-self: flex-start;
+        text-align: left;
+        margin-left: 10rem;
+        width: 100px;
+      }
+
+      @media (min-width: map-get($MEDIA, SM)) {
+        .technologies__name {
+          display: flex;
+          align-items: flex-end;
+          align-self: flex-start;
+          text-align: initial;
+          margin-left: initial;
+          width: initial;
+        }
+      }
+    }
+  }
+
+  &__name {
+    font-family: "OpenSans", sans-serif;
+    text-align: center;
+    display: block;
+    height: 32px;
+    line-height: 1;
+    font-size: 20px;
+
+    @media (min-width: map-get($MEDIA, SM)) {
+      font-size: 20px;
+      height: 28px;
+    }
+
+    @media (min-width: map-get($MEDIA, MD)) {
+      font-size: 24px;
+      height: 24px;
+    }
+
+    @media (min-width: map-get($MEDIA, LG)) {
+      font-size: 28px;
+      height: 20px;
+    }
+  }
+
+  &__addition {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 2px;
+
+    &_circle {
+      border-radius: 50%;
+    }
+
+    @media (min-width: map-get($MEDIA, SM)) {
+      top: 41%;
+    }
+
+    @media (min-width: map-get($MEDIA, MD)) {
+      top: 39%;
+      width: 24px;
+      height: 24px;
+    }
+
+    @media (min-width: map-get($MEDIA, LG)) {
+      top: 37%;
+      width: 28px;
+      height: 28px;
+    }
+  }
+}
+
+@keyframes animationTechnologies {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes animationItem {
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+@keyframes animationItemReverse {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
