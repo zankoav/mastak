@@ -161,6 +161,15 @@ function single_work_page_metabox() {
 		'id'   => 'color_list_end',
 		'type' => 'colorpicker'
 	) );
+	$cmb->add_field( array(
+		'name' => 'Technologies list:',
+		'id'   => 'technologies_list',
+		'type' => 'text',
+		'repeatable' => true,
+		'text' => array(
+			'add_row_text' => 'add technology',
+		),
+	) );
 
 //array cards
 	$group_field_id = $cmb->add_field( array(

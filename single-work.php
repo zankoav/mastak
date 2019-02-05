@@ -17,8 +17,13 @@ $project_goals      = unserialize( $meta_options['project_goal'][0] );
 $welc_sec_add_img   = $meta_options['welc_sec_add_img'][0];
 $techno_title_color = $meta_options['techno_title_color'][0];
 $techno_bgp         = $meta_options['techno_bgp'][0];
-$cards              = unserialize( $meta_options['cards'][0] );
+$techno_shape       = $meta_options['techno_item_shape'][0];
+$techno_list        = unserialize( $meta_options['technologies_list'][0] );
 
+
+$cards = unserialize( $meta_options['cards'][0] );
+
+//var_dump($meta_options);
 ?>
 <body style="background:<?= $body_bgc; ?>;">
 <div class="welcome" style="background-image:url(<?= $main_bg_img; ?>)">
@@ -92,34 +97,14 @@ $cards              = unserialize( $meta_options['cards'][0] );
 				</div>
 				<div class="technologies">
 					<div class="container">
-						<ul class="technologies__list" data-color-start="rgb(33,33,33)" data-color-end="rgb(33,33,33)">
-
-
-							<li class="technologies__item">
-								<span class="technologies__name">HTML5</span><span class="technologies__addition "></span>
-							</li>
-							<li class="technologies__item">
-								<span class="technologies__name">HTML5</span><span class="technologies__addition "></span>
-							</li>
-							<li class="technologies__item">
-								<span class="technologies__name">HTML5</span><span class="technologies__addition "></span>
-							</li>
-							<li class="technologies__item">
-								<span class="technologies__name">HTML5</span><span class="technologies__addition "></span>
-							</li>
-							<li class="technologies__item">
-								<span class="technologies__name">HTML5</span><span class="technologies__addition "></span>
-							</li>
-							<li class="technologies__item">
-								<span class="technologies__name">HTML5</span><span class="technologies__addition "></span>
-							</li>
-							<li class="technologies__item">
-								<span class="technologies__name">HTML5</span><span class="technologies__addition "></span>
-							</li>
-							<li class="technologies__item">
-								<span class="technologies__name">HTML5</span><span class="technologies__addition "></span>
-							</li>
-
+						<ul class="technologies__list">
+				<?php foreach ( $techno_list as $item ) : ?>
+									<li class="technologies__item">
+										<span class="technologies__name"><?= $item; ?></span>
+										<span class="technologies__addition <?= $techno_shape == 'circle' ? 'technologies__addition_circle' : ''; ?>">
+							</span>
+									</li>
+				<?php endforeach; ?>
 
 						</ul>
 					</div>
