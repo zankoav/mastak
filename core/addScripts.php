@@ -17,6 +17,8 @@ add_action('template_redirect', function () {
 	    wp_enqueue_script('tiser', Assets::getJs('tiser'), false, null, true);
     }else if (is_tax('portfolio')) {
 	    wp_enqueue_script('portfolio', Assets::getJs('portfolio'), false, null, true);
+    }else if (is_singular('work')){
+	    wp_enqueue_script('krasnogorkaPortfolio', Assets::getJs('krasnogorkaPortfolio'), false, null, true);
     }
 
   });
