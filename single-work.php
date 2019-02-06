@@ -19,6 +19,13 @@ $techno_title_color = $meta_options['techno_title_color'][0];
 $techno_bgp         = $meta_options['techno_bgp'][0];
 $techno_shape       = $meta_options['techno_item_shape'][0];
 $techno_list        = unserialize( $meta_options['technologies_list'][0] );
+$color_list_end_m   =  $meta_options['color_list_end'][0] ;
+$color_list_start_m = $meta_options['color_list_start'][0] ;
+
+list( $er, $eg, $eb ) = sscanf( $color_list_end_m, "#%02x%02x%02x" );
+list( $sr, $sg, $sb ) = sscanf( $color_list_start_m, "#%02x%02x%02x" );
+$color_list_end   = 'rgb('.$er.', '.$eg.', '.$eb.')';
+$color_list_start = 'rgb('.$sr.', '.$sg.', '.$sb.')';
 
 
 $cards = unserialize( $meta_options['cards'][0] );
@@ -29,9 +36,7 @@ $cards = unserialize( $meta_options['cards'][0] );
 <div class="welcome" style="background-image:url(<?= $main_bg_img; ?>)">
 	<div class="container">
 		<div class="welcome__inner">
-
 			<div class="welcome__title" style="color:<?= $title_color; ?>;"><?= $post->post_title ?></div>
-
 			<div class="welcome__logo">
 				<img class="welcome__photos-image" src="<?= $logo; ?>">
 			</div>
@@ -56,9 +61,7 @@ $cards = unserialize( $meta_options['cards'][0] );
 </div>
 <div class="paragraph">
 	<div class="container">
-
 		<div class="paragraph__inner" style="color:<?= $order_title_color; ?>;">
-
 			<div class="paragraph__title">что хотел заказчик:</div>
 			<ul class="paragraph__list">
 		  <?php foreach ( $customer_orders as $customer_order ) { ?>
@@ -70,9 +73,7 @@ $cards = unserialize( $meta_options['cards'][0] );
 </div>
 <div class="paragraph">
 	<div class="container">
-
 		<div class="paragraph__inner" style="color:<?= $order_title_color; ?>;">
-
 			<div class="paragraph__title">цели проекта:</div>
 			<ul class="paragraph__list">
 		  <?php foreach ( $project_goals as $project_goal ) { ?>
@@ -84,20 +85,25 @@ $cards = unserialize( $meta_options['cards'][0] );
 </div>
 <div class="sections">
 	<div class="sections__item">
-
 		<img class="sections__image" src="<?= $techno_bgp; ?>">
-
 		<div class="sections__wrapper">
 			<div class="container">
-
 				<div class="subtitle__text subtitle__text_position_right" data-text="Technologies used"
 				     style="color:<?= $techno_title_color; ?>;">
-
 					Technologies used
 				</div>
 				<div class="technologies">
 					<div class="container">
-						<ul class="technologies__list">
+						<ul class="technologies__list" 
+						    data-color-start="<?= $color_list_start;?>" 
+						    data-color-end="<?= $color_list_end;?>">
+							
+							<style>
+								.technologies__list:after{
+									background: -webkit-gradient(linear,left top,right top,from(<?= $color_list_start_m?>),to(<?= $color_list_end_m?>));
+								}
+							</style>
+
 				<?php foreach ( $techno_list as $item ) : ?>
 									<li class="technologies__item">
 										<span class="technologies__name"><?= $item; ?></span>

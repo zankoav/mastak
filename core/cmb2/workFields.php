@@ -43,6 +43,7 @@ function work_fields_metabox() {
 		'name' => 'preview image',
 		'id'   => 'long_image',
 		'type' => 'file',
+		'preview_size' => 'thumbnail',
 		'desc' => 'in portfolio page',
 	) );
 	$cmb->add_field( array(
@@ -88,21 +89,25 @@ function single_work_page_metabox() {
 	$cmb->add_field( array(
 		'name' => 'Background image',
 		'id'   => 'img_bgc',
+		'preview_size' => 'thumbnail',
 		'type' => 'file'
 	) );
 	$cmb->add_field( array(
 		'name' => 'iMac background image',
 		'id'   => 'iMac_img',
+		'preview_size' => 'thumbnail',
 		'type' => 'file'
 	) );
 	$cmb->add_field( array(
 		'name' => 'iPhone background image',
 		'id'   => 'iPhone_img',
+		'preview_size' => 'thumbnail',
 		'type' => 'file'
 	) );
 	$cmb->add_field( array(
 		'name' => 'welcome section addition image',
 		'id'   => 'welc_sec_add_img',
+		'preview_size' => 'thumbnail',
 		'type' => 'file'
 	) );
 
@@ -139,6 +144,7 @@ function single_work_page_metabox() {
 	$cmb->add_field( array(
 		'name' => 'Technologies background picture',
 		'id'   => 'techno_bgp',
+		'preview_size' => 'thumbnail',
 		'type' => 'file'
 	) );
 	$cmb->add_field( array(
@@ -217,6 +223,7 @@ function single_work_page_metabox() {
 	$cmb->add_group_field( $group_field_id, array(
 		'name' => 'Entry background image',
 		'id'   => 'bg_image',
+		'preview_size' => 'thumbnail',
 		'type' => 'file',
 		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
 	) );
