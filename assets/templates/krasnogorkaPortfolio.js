@@ -7,4 +7,5 @@ import './../components/subtitle/subtitle';
 import './../components/sections/sections';
 import './../components/technologies/technologies';
 import './../components/copyright/copyright';
+import './../components/technology/technology';
 
