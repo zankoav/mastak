@@ -16,6 +16,8 @@ add_action('template_redirect', function () {
 	    wp_enqueue_style('services', Assets::getCss('services'), false, null);
     }else if (is_page_template('template-tiser.php')) {
 	    wp_enqueue_style('tiser', Assets::getCss('tiser'), false, null);
+    }else if (is_singular('work')){
+	    wp_enqueue_style('krasnogorkaPortfolio', Assets::getCss('krasnogorkaPortfolio'), false, null);
     }
 
   });

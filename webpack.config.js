@@ -59,7 +59,8 @@ let pugs = {
 
 const NODE_ENV = process.env.NODE_ENV;
 const DEV_MODE = NODE_ENV === 0;
-const WP = NODE_ENV === "wp-production";
+const WP = NODE_ENV == 2;
+console.log('wp', WP);
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');

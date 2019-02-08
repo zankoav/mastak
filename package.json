@@ -3,7 +3,7 @@
     "main": "webpack.config.js",
     "version": "0.0.1",
     "scripts": {
-        "wp-build": "NODE_ENV=wp-production webpack --mode production",
+        "wp-build": "set NODE_ENV=2 && webpack --mode production",
         "build": "set NODE_ENV=1 && webpack --mode production",
         "dev": "set NODE_ENV=0 && webpack-dev-server --open --mode development"
     },
@@ -38,6 +38,7 @@
     },
     "dependencies": {
         "jquery": "^3.3.1",
-        "swiper": "^4.3.5"
+        "swiper": "^4.3.5",
+        "terser": "^3.14.1"
     }
 }

@@ -39,16 +39,16 @@ $addresses= $options['mastak_addresses'];
     <?php endforeach;?>
     <div class="menu__info menu__info_social">
       <a class="menu__info-social-link" href="<?= $options["vk_link"];?>">
-        <img class="menu__info-social-icon" src="/wp-content/themes/mastak/src/icons/vk.833707.svg">
+        <img class="menu__info-social-icon" src="/wp-content/themes/mastak/src/icons/vk.6d31c7.svg">
       </a>
       <a class="menu__info-social-link" href="<?= $options["insta_link"];?>">
-        <img class="menu__info-social-icon" src="/wp-content/themes/mastak/src/icons/instagram.ac8c11.svg">
+        <img class="menu__info-social-icon" src="/wp-content/themes/mastak/src/icons/instagram.c17e42.svg">
       </a>
       <a class="menu__info-social-link" href="<?= $options["twitter_link"];?>">
-        <img class="menu__info-social-icon" src="/wp-content/themes/mastak/src/icons/twitter-logo.0cf989.svg">
+        <img class="menu__info-social-icon" src="/wp-content/themes/mastak/src/icons/twitter-logo.20a85f.svg">
       </a>
       <a class="menu__info-social-link" href="<?= $options["fb_link"];?>">
-        <img class="menu__info-social-icon" src="/wp-content/themes/mastak/src/icons/facebook-logo.27933b.svg">
+        <img class="menu__info-social-icon" src="/wp-content/themes/mastak/src/icons/facebook-logo.616e71.svg">
       </a>
     </div>
   </div>
