@@ -10,6 +10,15 @@ if ($(window).width() > 767) {
 let startColor = $(".technologies__list").data('color-start');
 let endColor = $(".technologies__list").data('color-end');
 
+if ($(window).width() > 720) {
+    $(".technologies__list").addClass('technologies__wrapper');
+} else {
+    $(".technologies__list").append("<div class ='technologies__wrapper'> </div>");
+}
+
+let wrapperColor = $(".technologies__list").data("wrapper-color");
+$(".technologies__wrapper").css("background", wrapperColor);
+
 var colorArray = interpolateColors(startColor, endColor, countItem);
 
 for (let i = 0; i < countItem; i++) {
@@ -66,4 +75,6 @@ $(window).on("scroll", function () {
         $(".technologies__item").removeClass('technologies__item_anim_item');
     }
 });
+
+
 

@@ -6,7 +6,7 @@
 }
 
 .technologies {
-  padding-top: 2rem;
+  padding: 2rem 0;
 
   @media (min-width: map-get($MEDIA, SM)) {
     padding-top: 4rem;
@@ -41,20 +41,17 @@
       animation: animationItemReverse 2s;
       animation-fill-mode: backwards;
     }
+  }
 
-    &:after {
-      position: absolute;
-      content: "";
-      display: inline-block;
-      width: 1px;
-      height: 100%;
-      background: linear-gradient(to bottom, #c3ea21, #0066cf);
+  &__wrapper {
+    width: 1px;
+    height: 100%;
+    position: absolute;
 
-      @media (min-width: map-get($MEDIA, SM)) {
-        width: 100%;
-        height: 1px;
-        background: linear-gradient(to right, #c3ea21, #0066cf);
-      }
+    @media (min-width: map-get($MEDIA, SM)) {
+      width: 100%;
+      height: 1px;
+      position: relative;
     }
   }
 
@@ -233,18 +230,12 @@
       border-radius: 50%;
     }
 
-    @media (min-width: map-get($MEDIA, SM)) {
-      top: 41%;
-    }
-
     @media (min-width: map-get($MEDIA, MD)) {
-      top: 39%;
       width: 24px;
       height: 24px;
     }
 
     @media (min-width: map-get($MEDIA, LG)) {
-      top: 37%;
       width: 28px;
       height: 28px;
     }

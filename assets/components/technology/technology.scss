@@ -1,0 +1,33 @@
+@import "./../constants";
+
+.technology {
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+
+
+  @media (min-width: map-get($MEDIA, SM)) {
+    min-height: 260px;
+  }
+
+  @media (min-width: map-get($MEDIA, MD)) {
+    min-height: 350px;
+  }
+
+  @media (min-width: map-get($MEDIA, LG)) {
+    min-height: 400px;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 1rem 0;
+
+    @media (min-width: map-get($MEDIA, SM)) {
+      padding-top: 3rem;
+      padding-bottom: 0;
+      margin-top: 0;
+    }
+  }
+}
