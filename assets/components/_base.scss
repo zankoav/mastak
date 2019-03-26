@@ -6,29 +6,47 @@
 @import "reset";
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
+    font-family : 'Open Sans', sans-serif;
+    font-weight : 300;
 }
 
 .container {
-  width: 100%;
-  padding: {
-    right: 1rem;
-    left: 1rem;
-  }
-
-  @media (min-width: map-get($MEDIA, SM)) {
-    padding: {
-      right: 2rem;
-      left: 2rem;
+    width : 100%;
+    padding   : {
+        right : .5rem;
+        left  : .5rem;
     }
-  }
 
-  @media (min-width: map-get($MEDIA, LG)) {
-    max-width: $MAX-WIDTH;
-    margin: {
-      left: auto;
-      right: auto;
+    @media (min-width : map-get($MEDIA, SM)) {
+        padding   : {
+            right : 1rem;
+            left  : 1rem;
+        }
     }
-  }
+
+    @media (min-width : map-get($MEDIA, MD)) {
+        padding   : {
+            right : 1.5rem;
+            left  : 1.5rem;
+        }
+    }
+
+    @media (min-width : map-get($MEDIA, LG)) {
+        max-width : $MAX-WIDTH;
+        padding   : {
+            right : 2.5rem;
+            left  : 2.5rem;
+        }
+        margin    : {
+            left  : auto;
+            right : auto;
+        }
+    }
+
+    @media (min-width : map-get($MEDIA, HD)) {
+        padding   : {
+            right : 6rem;
+            left  : 6rem;
+        }
+    }
 }
