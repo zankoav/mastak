@@ -32,11 +32,8 @@ body {
     }
 
     @media (min-width : map-get($MEDIA, LG)) {
-        max-width : $MAX-WIDTH;
-        padding   : {
-            right : 2.5rem;
-            left  : 2.5rem;
-        }
+        max-width : $MAX-WIDTH-LG;
+        padding   : 0;
         margin    : {
             left  : auto;
             right : auto;
@@ -44,9 +41,6 @@ body {
     }
 
     @media (min-width : map-get($MEDIA, HD)) {
-        padding   : {
-            right : 6rem;
-            left  : 6rem;
-        }
+        max-width : $MAX-WIDTH-HD;
     }
 }
